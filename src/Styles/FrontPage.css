@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    display: flex;
+    justify-content: center;
+}
+
+.Header_external {
+    width:100%;
+    padding: 0;
+    margin: 0;
+}
+
+.Header_internal {
+    background-color: black;
+    font-family: fantasy;
+    font-size: medium;
+    color: whitesmoke;
+    display: flex;
+    padding: 20px;
+    margin: 0;
+    margin:0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Rules_Bottom{
+    padding: 10px;
+    background: black;
+    border: 2px solid green;
+    color:aquamarine; 
+    font-size: 10pt;
+}
+.Rules_Bottom:hover{
+    padding: 10px;
+    background: green;
+    border: 2px solid green;
+    color:white; 
+    font-size: 10pt;
+}
