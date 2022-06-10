@@ -1,5 +1,5 @@
 import React, { useDebugValue, useState } from 'react';
-import '../Styles/FrontPage.css';
+import '../Styles/FirstModule.css';
 import FirstModuleHeader from '../components/FirstModuleHeader';
 
 function FirstModule() {
