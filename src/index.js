@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import FrontPage from './FrontPage';
+import App from './App';
+import FrontPage from './Pages/FrontPage';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <FrontPage />
+    <App/>
 );
 

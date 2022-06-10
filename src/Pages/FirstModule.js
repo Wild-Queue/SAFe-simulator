@@ -1,8 +1,8 @@
 import React, { useDebugValue, useState } from 'react';
-import './Styles/FrontPage.css';
-import Header from './components/header';
+import '../Styles/FrontPage.css';
+import Header from '../components/header';
 
-function App() {
+function FirstModule() {
   
   return (
     <div className="Header_external">
@@ -11,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+export default FirstModule;
