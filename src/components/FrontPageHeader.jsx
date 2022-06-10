@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 
-const Header = function(){
+const FrontPageHeader = function(){
       
     function Rules(){
         console.log('Rules');
@@ -16,4 +16,4 @@ const Header = function(){
     )
 }
 
-export default Header;
+export default FrontPageHeader;

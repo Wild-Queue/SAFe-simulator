@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom"
 
-const Body = function(){
+const FrontPageBody = function(){
       
     function MoveFirstModule(){
         window.location.assign('/FirstModule');
@@ -17,4 +17,4 @@ const Body = function(){
     )
 }
 
-export default Body;
+export default FrontPageBody;

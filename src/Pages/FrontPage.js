@@ -1,7 +1,7 @@
 import React, { useDebugValue, useState } from 'react';
 import '../Styles/FrontPage.css';
-import Header from '../components/header';
-import Body from '../components/body';
+import FrontPageHeader from '../components/FrontPageHeader';
+import FrontPageBody from '../components/FrontPageBody';
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import FirstModule from './FirstModule';
 
@@ -11,10 +11,10 @@ function FrontPage() {
 
     <div>
       <div className="Header_external">
-        <Header />
+        <FrontPageHeader/>
       </div>
       <div className="Body_external">
-        <Body />
+        <FrontPageBody/>
       </div>
     </div>
   );
