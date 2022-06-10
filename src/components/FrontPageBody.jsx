@@ -10,7 +10,7 @@ const FrontPageBody = function(){
 
     return(
         <div className='Body_internal'>
-            <h1> S.A.F.e Simulator - это симулятор <br/> который позволит вам в игровой форме познакомится с основами SAFe</h1>
+            <h1> S.A.F.e Simulator - это симулятор, <br/> который позволит вам в игровой форме познакомиться с основами SAFe</h1>
             <button onClick = {MoveFirstModule} className='Start_Bottom'> Старт</button>
 
         </div>

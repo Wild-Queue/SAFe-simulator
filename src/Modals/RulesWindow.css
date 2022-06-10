@@ -1,0 +1,40 @@
+.model {
+    height: 0vh;
+    width: 0vh;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9998;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.model.active {
+    height: 100vh;
+    width: 100vh;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.model__content {
+    padding: 0px;
+    border-radius: 12px;
+    background-color: white;
+    height: 0px;
+    width: 0px;
+    transform: scale(0.5);
+    opacity: 0;
+}
+
+.model__content.active{
+    padding: 20px;
+    height: 200px;
+    width: 400px;
+    transform: scale(1);
+    opacity: 1;
+}
