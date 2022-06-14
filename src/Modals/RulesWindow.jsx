@@ -1,5 +1,5 @@
 import React from "react";
-import './RulesWindow.css'
+import '../Styles/RulesWindow.css'
 
 const RulesWindow = ({active, setActive, children}) => {
     return (

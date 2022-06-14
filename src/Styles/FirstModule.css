@@ -1,43 +1,119 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
-#root{
-    display: flex;
-    justify-content: center;
-}
-
-.Header_external {
-    width: 100vmax;
+.FM_Header_external {
+    width: 100vw;
     padding: 0;
     margin: 0;
 }
 
-.Header_internal {
+.FM_Header_internal {
     background-color: black;
     font-family: fantasy;
     font-size: medium;
     color: whitesmoke;
     display: flex;
-    padding: 20px;
+    padding: 1.7vw;
+    width: 100vw;
     margin: 0;
-    justify-content: space-between;
+    justify-content:space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.FM_Rules_Bottom{
+    padding: 1.2vmin;
+    background: black;
+    border: 2px solid green;
+    border-radius: 5px;
+    color:aquamarine; 
+    font-size: 1.5vmin;
+}
+.FM_Rules_Bottom:hover{
+    padding: 1.2vmin;
+    background: green;
+    border: 2px solid green;
+    border-radius: 5px;
+    color:white; 
+    font-size: 1.5vmin;
+}
+
+.FM_Home_Bottom{
+    padding: 1.2vmin;
+    background: black;
+    border: 2px solid burlywood;
+    border-radius: 5px;
+    color:burlywood; 
+    font-size: 1.4vmin;
+}
+.FM_Home_Bottom:hover{
+    padding: 1.2vmin;
+    background:peru;
+    border: 2px solid peru;
+    border-radius: 5px;
+    color:black; 
+    font-size: 1.4vmin;
+}
+
+.FM_Body_external{  
+    align-items:center;
+    height: 180vw;
+    width: 100vw;
+    background-color: whitesmoke;
+}
+
+.FM_Body_internal{
+    position:absolute;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+    height: 0vw;
+    width: 100vw;
+    color: black;
+    columns: 2;
+    justify-content:space-between;
     align-items: center;
 }
 
-.Rules_Bottom{
-    padding: 10px;
-    background: black;
-    border: 2px solid green;
-    color:aquamarine; 
-    font-size: 10pt;
+.ColumnLeft{
+    position:absolute;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2vw;
+    height: 40vw;
+    width: 48vw;
+    color: black;
 }
-.Rules_Bottom:hover{
-    padding: 10px;
-    background: green;
-    border: 2px solid green;
+
+.ColumnRight{
+    position:absolute;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 25px;
+    height: 40vw;
+    width: 48vw;
+    color: black;
+    margin-left: 49vw;
+}
+
+.FM_Save_Bottom{
+    padding: 2vw;
+    margin-top: 167vw;
+    margin-left: 41vw;
+    background:rgb(29, 223, 22);
+    border: 2px solid rgb(29, 223, 22);
+    border-radius: 10px;
     color:white; 
-    font-size: 10pt;
+    font-size: 2.5vw;
+}
+
+.FM_Save_Bottom:hover{
+    padding: 2vw;
+    margin-top: 167vw;
+    margin-left: 41vw;
+    background: darkgreen;
+    border: 2px solid darkgreen;
+    border-radius: 10px;
+    color:white; 
+    font-size: 2.5vw;
 }

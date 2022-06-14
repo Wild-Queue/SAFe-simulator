@@ -1,12 +1,18 @@
-import React, { useDebugValue, useState } from 'react';
+import React from 'react';
 import '../Styles/FirstModule.css';
 import FirstModuleHeader from '../components/FirstModuleHeader';
+import FirstModuleBody from '../components/FirstModuleBody';
 
 function FirstModule() {
-  
+
   return (
-    <div className="Header_external">
-      <FirstModuleHeader/>
+    <div>
+      <div className="FM_Header_external">
+        <FirstModuleHeader/>
+      </div>
+      <div className="FM_Body_external">
+        <FirstModuleBody/>
+      </div>
     </div>
   );
 }

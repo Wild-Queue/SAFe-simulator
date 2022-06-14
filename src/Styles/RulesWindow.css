@@ -1,5 +1,5 @@
 .model {
-    height: 0vh;
+    height: 0vw;
     width: 0vh;
     background-color: rgba(0,0,0,0.4);
     position: fixed;
@@ -15,8 +15,8 @@
 }
 
 .model.active {
-    height: 100vh;
-    width: 100vh;
+    height: 100vw;
+    width: 100%;
     opacity: 1;
     pointer-events: all;
 }
@@ -32,9 +32,9 @@
 }
 
 .model__content.active{
-    padding: 20px;
-    height: 200px;
-    width: 400px;
+    padding: 2vh;
+    height: 20vh;
+    width: 40vh;
     transform: scale(1);
     opacity: 1;
 }

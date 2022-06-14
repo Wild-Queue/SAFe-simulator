@@ -1,8 +1,6 @@
-import React, {useState } from 'react';
-import { BrowserRouter, Route, Routes, Link, Switch } from "react-router-dom"
+import React from 'react';
+import { BrowserRouter, Route, Routes} from "react-router-dom"
 import './Styles/FrontPage.css';
-import Header from './components/FrontPageHeader';
-import Body from './components/FrontPageBody';
 import FrontPage from './Pages/FrontPage';
 import FirstModule from './Pages/FirstModule';
 

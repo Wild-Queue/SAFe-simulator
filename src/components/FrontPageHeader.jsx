@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom"
 import RulesWindow from '../Modals/RulesWindow';
 
 const FrontPageHeader = function () {
@@ -12,7 +11,7 @@ const FrontPageHeader = function () {
                 <button onClick={() => setModalActive(true)} className='Rules_Bottom'> Правила игры </button>
             </div>
             <RulesWindow active={modalActive} setActive={setModalActive}>
-                SAFe rules
+                SAFe rules 
             </RulesWindow>
         </div>
     )

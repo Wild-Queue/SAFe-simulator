@@ -1,10 +1,7 @@
-import React, { useDebugValue, useState } from 'react';
+import React from 'react';
 import '../Styles/FrontPage.css';
 import FrontPageHeader from '../components/FrontPageHeader';
 import FrontPageBody from '../components/FrontPageBody';
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import FirstModule from './FirstModule';
-import RulesWindow from '../Modals/RulesWindow';
 
 function FrontPage() {
 
