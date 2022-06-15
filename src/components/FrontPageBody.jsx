@@ -18,7 +18,7 @@ const FrontPageBody = function () {
                 </div>
             </h1>
             <div className='Body_internal'>
-                Показываем людям, что такое Scaled Agile Framwork и как с ним работать.
+                    Показываем людям, что такое Scaled Agile Framwork и как с ним работать.
             </div>
             <button onClick={MoveFirstModule} className='Start_Bottom'> Старт</button>
         </div>
