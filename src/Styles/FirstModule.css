@@ -4,6 +4,14 @@
     box-sizing:border-box;
 }
 
+#root{
+    display: flex;
+    justify-content: center;
+    object-position: center;
+    background-color: whitesmoke;
+    box-sizing: content-box;
+}
+
 .FM_Header_external {
     width: 100vw;
     padding: 0;
@@ -16,7 +24,7 @@
     font-size: medium;
     color: whitesmoke;
     display: flex;
-    padding: 1.7vw;
+    padding: 1.7vh;
     width: 100vw;
     margin: 0;
     justify-content:space-between;
@@ -25,7 +33,7 @@
 }
 
 .FM_Rules_Bottom{
-    padding: 1.2vmin;
+    padding: 1.1vmin;
     background: black;
     border: 2px solid green;
     border-radius: 5px;
@@ -33,7 +41,7 @@
     font-size: 1.5vmin;
 }
 .FM_Rules_Bottom:hover{
-    padding: 1.2vmin;
+    padding: 1.1vmin;
     background: green;
     border: 2px solid green;
     border-radius: 5px;
@@ -42,7 +50,7 @@
 }
 
 .FM_Home_Bottom{
-    padding: 1.2vmin;
+    padding: 1.1vmin;
     background: black;
     border: 2px solid burlywood;
     border-radius: 5px;
@@ -50,7 +58,7 @@
     font-size: 1.4vmin;
 }
 .FM_Home_Bottom:hover{
-    padding: 1.2vmin;
+    padding: 1.1vmin;
     background:peru;
     border: 2px solid peru;
     border-radius: 5px;
