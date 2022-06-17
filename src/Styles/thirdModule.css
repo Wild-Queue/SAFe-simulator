@@ -1,0 +1,9 @@
+.sprint {
+  min-width: 16.1rem;
+  min-height: 10rem;
+  background: #f0f2f5;
+}
+
+.dragging {
+  opacity: 30%;
+}
