@@ -3,7 +3,7 @@ class Card3 extends Component {
   renderSize() {
     const { size } = this.props.card;
     return (
-      <h3 className="text-end mb-n3" style={{ margin: "-2.5rem -0.5rem 0 0" }}>
+      <h3 className="text-end mb-n3" style={{ margin: "-3rem -0.5rem 0 0" }}>
         <span className="badge rounded-pill bg-white text-dark border">
           {size}
         </span>
@@ -42,7 +42,7 @@ class Card3 extends Component {
 
   render() {
     const { epic, feature, story, id, dependsOn } = this.props.card;
-    const { draggable } = this.props;
+    const { draggable, epicColor } = this.props;
     return (
       <div
         id={id}
@@ -51,9 +51,8 @@ class Card3 extends Component {
         onDragOver={this.dragOver}
         onDragEnd={this.dragEnd}
         className="card mb-3"
-        style={{ width: "16rem", cursor: "default" }}
       >
-        <div className="card-header text-white bg-primary">
+        <div className={"card-header " + epicColor}>
           <small className="card-subtitle fw-bold">{epic}</small>
           <h5 style={{ marginBottom: "0.25rem" }}>
             {feature} <span className="badge bg-light text-dark">{id}</span>

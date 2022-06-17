@@ -2,14 +2,20 @@ import React, { Component } from "react";
 import Card3 from "../Modals/Card3";
 import "bootstrap/dist/css/bootstrap.css";
 import "../Styles/thirdModule.css";
-import { getCards3, getSprints3 } from "../services/thirdModuleDatas";
+import {
+  getCards3,
+  getSprints3,
+  getEpicsColor,
+} from "../services/thirdModuleDatas";
 import Sprint3 from "../Modals/Sprint3";
+import FirstModuleHeader from "../components/FirstModuleHeader";
 
 class ThirdPage extends Component {
   state = {
     cardsData: {},
     sprints: [],
     cardSprint: {},
+    epicsColor: {},
   };
 
   componentDidMount() {
@@ -17,6 +23,7 @@ class ThirdPage extends Component {
     const cardsData = {};
     const sprints = getSprints3();
     const cardSprint = {};
+    const epicsColor = getEpicsColor();
     cards.forEach((cardData) => {
       cardsData[cardData.id] = cardData;
     });
@@ -25,12 +32,20 @@ class ThirdPage extends Component {
         cardSprint[cardId] = index;
       });
     });
-    this.setState({ cardsData, sprints, cardSprint });
+    this.setState({ cardsData, sprints, cardSprint, epicsColor });
   }
 
-  createCard = (cardId) => (
-    <Card3 key={cardId} card={this.state.cardsData[cardId]} draggable={true} />
-  );
+  createCard = (cardId) => {
+    const { cardsData, epicsColor } = this.state;
+    return (
+      <Card3
+        key={cardId}
+        card={cardsData[cardId]}
+        draggable={true}
+        epicColor={epicsColor[cardsData[cardId].epic]}
+      />
+    );
+  };
 
   handleCardDrop = (cardId, newSprintId) => {
     console.log(cardId, newSprintId);
@@ -42,11 +57,14 @@ class ThirdPage extends Component {
         (cId) => cId !== cardId
       );
     }
-    const newSprint = [...sprints[newSprintId]];
-    newSprint.push(cardId);
-    sprints[newSprintId] = newSprint;
-    cardSprint[cardId] = newSprintId;
-
+    if (newSprintId !== "reserveSprint") {
+      const newSprint = [...sprints[newSprintId]];
+      newSprint.push(cardId);
+      sprints[newSprintId] = newSprint;
+      cardSprint[cardId] = newSprintId;
+    } else {
+      delete cardSprint[cardId];
+    }
     this.setState({ cardSprint, sprints });
   };
 
@@ -68,32 +86,40 @@ class ThirdPage extends Component {
     // console.log(cardSprint);
     return (
       <React.Fragment>
-        <div className="d-flex align-items-stratch mx-auto mt-2">
-          {sprints.map((sprint, index) => (
-            <Sprint3
-              onCardDrop={(cardId) => this.handleCardDrop(cardId, index)}
-              key={index}
-              cards={sprintsCards[index]}
-            >
-              <h4 className="text-center">
-                Sprint {index + 1}{" "}
-                {sprintsSizes[index] ? (
-                  <span className="badge rounded-pill bg-white text-dark border">
-                    {sprintsSizes[index]}
-                  </span>
-                ) : (
-                  ""
-                )}
-              </h4>
-            </Sprint3>
-          ))}
-        </div>
-        <div className="d-flex align-items-start flex-wrap">
-          {Object.keys(cardsData).map((key) =>
-            !(cardSprint[cardsData[key].id] >= 0)
-              ? this.createCard(cardsData[key].id)
-              : ""
-          )}
+        <div className="d-flex flex-column">
+          <FirstModuleHeader />
+          <div className="d-flex align-items-stratch mx-auto mt-5">
+            {sprints.map((sprint, index) => (
+              <Sprint3
+                onCardDrop={(cardId) => this.handleCardDrop(cardId, index)}
+                key={index}
+                cards={sprintsCards[index]}
+                className="d-flex flex-column align-items-center m-3 rounded pb-5 sprint"
+              >
+                <h4 className="text-center">
+                  Sprint {index + 1}{" "}
+                  {sprintsSizes[index] ? (
+                    <span className="badge rounded-pill bg-white text-dark border">
+                      {sprintsSizes[index]}
+                    </span>
+                  ) : (
+                    ""
+                  )}
+                </h4>
+              </Sprint3>
+            ))}
+          </div>
+          <Sprint3
+            className="d-flex align-content-start align-items-start flex-wrap reserve-sprint mt-5"
+            onCardDrop={(cardId) =>
+              this.handleCardDrop(cardId, "reserveSprint")
+            }
+            cards={Object.keys(cardsData).map((key) =>
+              !(cardSprint[cardsData[key].id] >= 0)
+                ? this.createCard(cardsData[key].id)
+                : ""
+            )}
+          ></Sprint3>
         </div>
       </React.Fragment>
     );

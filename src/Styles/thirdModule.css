@@ -1,9 +1,47 @@
 .sprint {
-  min-width: 16.1rem;
+  min-width: 16rem;
   min-height: 10rem;
-  background: #f0f2f5;
+  background: #e5e5e5;
 }
 
 .dragging {
   opacity: 30%;
+}
+
+.card {
+  width: 16rem;
+  cursor: default;
+  margin-left: 0.05rem;
+  margin-right: 0.05rem;
+}
+
+.reserve-sprint {
+  background: #e0e0f0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.blue-epic {
+  background: #0a82c3;
+}
+.orange-epic {
+  background: #ee7213;
+}
+.green-epic {
+  background: #085c26;
+}
+.purple-epic {
+  background: #d73ecd;
+}
+.red-epic {
+  background: #ee1919;
+}
+.brown-epic {
+  background: #a3711a;
+}
+.light-blue-epic {
+  background: #25c5e1;
+}
+.violet-epic {
+  background: #7c1ad2;
 }

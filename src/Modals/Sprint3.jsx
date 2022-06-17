@@ -2,15 +2,12 @@ import React from "react";
 import Board from "./Board";
 
 const Sprint3 = (props) => {
-  const { cards, children, onCardDrop } = props;
+  const { cards, children, onCardDrop, className } = props;
 
   return (
     <div>
       {children}
-      <Board
-        cardDrop={onCardDrop}
-        className="d-flex flex-column align-items-center m-1 rounded pb-5 sprint"
-      >
+      <Board cardDrop={onCardDrop} className={className}>
         {cards}
       </Board>
     </div>
