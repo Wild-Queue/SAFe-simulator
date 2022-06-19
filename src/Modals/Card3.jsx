@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 class Card3 extends Component {
+  enterLeaveCounter = 0;
+  // cardId = 0;
+
   renderSize() {
     const { size } = this.props.card;
     return (
@@ -10,6 +13,7 @@ class Card3 extends Component {
       </h3>
     );
   }
+
   renderFooter() {
     const { dependsOn } = this.props.card;
     return (
@@ -31,8 +35,19 @@ class Card3 extends Component {
   };
 
   dragOver = (e) => {
-    e.stopPropagation();
-    // console.log("Card");
+    e.preventDefault();
+  };
+
+  dragEnter = (e) => {
+    e.preventDefault();
+    if (this.enterLeaveCounter === 0) this.props.dragEnter(this.props.card.id);
+    this.enterLeaveCounter++;
+  };
+
+  dragLeave = (e) => {
+    e.preventDefault();
+    this.enterLeaveCounter--;
+    if (this.enterLeaveCounter === 0) this.props.dragLeave(this.props.card.id);
   };
 
   dragEnd = (e) => {
@@ -47,6 +62,8 @@ class Card3 extends Component {
       <div
         id={id}
         draggable={draggable}
+        onDragEnter={this.dragEnter}
+        onDragLeave={this.dragLeave}
         onDragStart={this.dragStart}
         onDragOver={this.dragOver}
         onDragEnd={this.dragEnd}

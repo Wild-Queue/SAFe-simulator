@@ -8,6 +8,16 @@
   opacity: 30%;
 }
 
+.sprint-heading {
+  background: whitesmoke;
+  padding: 0.5rem 1rem;
+  align-self: center;
+  top: 0px;
+  z-index: 1000;
+  position: sticky;
+  /* border-radius: 3rem; */
+}
+
 .card {
   width: 16rem;
   cursor: default;
@@ -15,10 +25,9 @@
   margin-right: 0.05rem;
 }
 
-.reserve-sprint {
-  background: #e0e0f0;
+.reserve-board {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .blue-epic {
@@ -44,4 +53,20 @@
 }
 .violet-epic {
   background: #7c1ad2;
+}
+
+.top-stuck,
+.bottom-stuck {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
+}
+.bottom-stuck {
+  height: 25%;
+  bottom: 0px;
+  background: #e0e0f0;
+}
+.top-stuck {
+  height: 75%;
+  top: 0px;
 }
