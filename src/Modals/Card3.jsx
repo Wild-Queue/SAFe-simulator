@@ -40,12 +40,14 @@ class Card3 extends Component {
 
   dragEnter = (e) => {
     e.preventDefault();
+    // console.log("dragEnter", this.enterLeaveCounter);
     if (this.enterLeaveCounter === 0) this.props.dragEnter(this.props.card.id);
     this.enterLeaveCounter++;
   };
 
   dragLeave = (e) => {
     e.preventDefault();
+    // console.log("dragLeave", this.enterLeaveCounter);
     this.enterLeaveCounter--;
     if (this.enterLeaveCounter === 0) this.props.dragLeave(this.props.card.id);
   };
@@ -53,6 +55,7 @@ class Card3 extends Component {
   dragEnd = (e) => {
     const target = e.target;
     target.classList.remove("dragging");
+    this.enterLeaveCounter = 0;
   };
 
   render() {

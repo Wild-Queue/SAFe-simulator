@@ -22,12 +22,12 @@ class ThirdPage extends Component {
   dragParameters = {};
 
   handleDragEnter = (cardId) => {
-    console.log("handleDragEnter", cardId);
+    // console.log("handleDragEnter", cardId);
     this.dragParameters["enteredCardId"] = cardId;
   };
 
   handleDragLeave = (cardId) => {
-    console.log("handleDrageLeave", cardId);
+    // console.log("handleDrageLeave", cardId);
     delete this.dragParameters["enteredCardId"];
   };
 
@@ -67,6 +67,7 @@ class ThirdPage extends Component {
     const oldSprintId = cardSprint[cardId];
     const sprints = [...this.state.sprints];
     const enteredCardId = this.dragParameters["enteredCardId"];
+    delete this.dragParameters["enteredCardId"];
     if (oldSprintId >= 0) {
       sprints[oldSprintId] = sprints[oldSprintId].filter(
         (cId) => cId !== cardId
