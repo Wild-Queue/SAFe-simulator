@@ -3,6 +3,7 @@ import Card3 from "../Modals/Card3";
 import Board from "../Modals/Board";
 import "bootstrap/dist/css/bootstrap.css";
 import "../Styles/thirdModule.css";
+import Alert from "../Modals/Alert3";
 import {
   getCards3,
   getSprints3,
@@ -18,6 +19,9 @@ class ThirdPage extends Component {
     sprints: [],
     cardSprint: {},
     epicsColor: {},
+    dependantCardId: undefined,
+    providerCardId: undefined,
+    exceededSprintId: undefined,
   };
   dragParameters = {};
 
@@ -30,6 +34,14 @@ class ThirdPage extends Component {
     // console.log("handleDrageLeave", cardId);
     delete this.dragParameters["enteredCardId"];
   };
+
+  getSprintSize(sprint) {
+    let sprintSize = 0;
+    sprint.forEach((cardId) => {
+      sprintSize += this.state.cardsData[cardId].size || 0;
+    });
+    return sprintSize;
+  }
 
   componentDidMount() {
     const cards = getCards3();
@@ -62,7 +74,41 @@ class ThirdPage extends Component {
     );
   };
 
+  handleDependencyAlertClose = (e) => {
+    e.preventDefault();
+    this.setState({ dependantCardId: undefined, providerCardId: undefined });
+  };
+
+  handleExceedenceAlertClose = (e) => {
+    e.preventDefault();
+    this.setState({ exceededSprintId: undefined });
+  };
+
   handleCardDrop = (cardId, newSprintId) => {
+    // checking the dependencies
+    const card = this.state.cardsData[cardId];
+    if (
+      newSprintId !== "reserveSprint" &&
+      this.getSprintSize(this.state.sprints[newSprintId]) + card.size > 30
+    ) {
+      this.setState({ exceededSprintId: newSprintId });
+      return;
+    }
+    if (newSprintId !== "reserveSprint") {
+      let isDependencyConflict = false;
+      Object.keys(this.state.cardsData).forEach((id) => {
+        if (
+          card.dependsOn === id &&
+          !(this.state.cardSprint[id] < newSprintId)
+        ) {
+          isDependencyConflict = true;
+          this.setState({ dependantCardId: cardId, providerCardId: id });
+          return;
+        }
+      });
+      if (isDependencyConflict) return;
+    }
+
     const cardSprint = { ...this.state.cardSprint };
     const oldSprintId = cardSprint[cardId];
     const sprints = [...this.state.sprints];
@@ -92,14 +138,17 @@ class ThirdPage extends Component {
   };
 
   render() {
-    const { cardsData, sprints, cardSprint } = this.state;
+    const {
+      cardsData,
+      sprints,
+      cardSprint,
+      dependantCardId,
+      providerCardId,
+      exceededSprintId,
+    } = this.state;
 
     const sprintsSizes = sprints.map((sprint) => {
-      let sprintSize = 0;
-      sprint.forEach((cardId) => {
-        sprintSize += cardsData[cardId].size || 0;
-      });
-      return sprintSize;
+      return this.getSprintSize(sprint);
     });
 
     const sprintsCards = sprints.map((sprint) =>
@@ -112,6 +161,23 @@ class ThirdPage extends Component {
         <div className="top-stuck">
           <div className="d-flex flex-column">
             <FirstModuleHeader />
+            <div className="alerts-container3">
+              {dependantCardId && (
+                <Alert
+                  type="danger"
+                  message={`Карта ${dependantCardId} зависит от карты ${providerCardId}. Убедитесь, что карта ${dependantCardId} поставлена на более поздний спринт, чем карта ${providerCardId}.`}
+                  closeHandler={this.handleDependencyAlertClose}
+                ></Alert>
+              )}
+              {exceededSprintId && (
+                <Alert
+                  type="danger"
+                  message={`Ставить эту карту в спринт ${exceededSprintId +
+                    1} нельзя. Размер спринта не должен превышать 30.`}
+                  closeHandler={this.handleExceedenceAlertClose}
+                ></Alert>
+              )}
+            </div>
             <div className="d-flex align-items-stratch mx-auto mt-5">
               {sprints.map((sprint, index) => (
                 <Sprint3
@@ -121,7 +187,7 @@ class ThirdPage extends Component {
                   className="d-flex flex-column align-items-center m-3 rounded pb-5 sprint"
                 >
                   <h4 className="sprint-heading text-center">
-                    Sprint {index + 1}{" "}
+                    Спринт {index + 1}{" "}
                     {sprintsSizes[index] ? (
                       <span className="badge rounded-pill bg-white text-dark border">
                         {sprintsSizes[index]}

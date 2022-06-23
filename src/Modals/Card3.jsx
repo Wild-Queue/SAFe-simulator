@@ -19,7 +19,7 @@ class Card3 extends Component {
     return (
       <div className="card-footer">
         <small className="fw-light text-muted card-header-pills">
-          Depends On:
+          Зависит от:
         </small>
         <p className="lh-sm text-muted">{dependsOn}</p>
         {this.renderSize()}

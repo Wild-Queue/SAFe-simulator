@@ -74,3 +74,13 @@ html {
   height: 75%;
   top: 0px;
 }
+
+.alerts-container3 {
+  position: sticky;
+  top: 1px;
+  z-index: 2000;
+  width: 500px;
+  margin: 0.1rem;
+  display: flex;
+  flex-direction: column;
+}
