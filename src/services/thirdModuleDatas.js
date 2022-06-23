@@ -1,6 +1,7 @@
 const sprints = [[], [], [], [], [], []];
 
 const featuresMapper = {
+  "01": { epic: " ", feature: "Медицинский центр" },
   "21": { epic: "Центр отдыха и здоровья", feature: "Центр здоровья" },
   "32": { epic: "Жилой комплекс Блювилл", feature: "Сборная площадь" },
   "34": { epic: "Жилой комплекс Блювилл", feature: "Автобусная улица" },
@@ -13,6 +14,7 @@ const featuresMapper = {
   "71": { epic: "Технопарк Экстрим", feature: "Гигакомплекс" },
   "72": { epic: "Технопарк Экстрим", feature: "Инновационный центр" },
   "81": { epic: "Торговая улица Дрю", feature: "Необходимые вещи" },
+  "91": { epic: "Супермаркет WIP", feature: "Супермаркет WIP" },
 };
 export function getFeaturesMapper() {
   return featuresMapper;

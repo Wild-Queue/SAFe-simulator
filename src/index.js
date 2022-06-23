@@ -4,4 +4,20 @@ import ReactDOM from "react-dom/client";
 import ThirdPage from "./Pages/ThirdPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<ThirdPage features={["21", "41", "63", "71", "81"]} />);
+root.render(
+  <ThirdPage
+    features={[
+      "01",
+      "21",
+      "32",
+      "34",
+      "41",
+      "61",
+      "63",
+      "71",
+      "72",
+      "81",
+      "91",
+    ]}
+  />
+);
