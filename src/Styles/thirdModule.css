@@ -73,6 +73,7 @@ html {
 .top-stuck {
   height: 75%;
   top: 0px;
+  z-index: 3000;
 }
 
 .alerts-container3 {
