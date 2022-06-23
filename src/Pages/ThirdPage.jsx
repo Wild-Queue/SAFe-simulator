@@ -71,7 +71,7 @@ class ThirdPage extends Component {
         cards.length +
         " cards, " +
         loadedCounter +
-        " of them have been loaded based on the received list features!"
+        " of them have been loaded based on the received list of features!"
     );
     sprints.forEach((sprint, index) => {
       sprint.forEach((cardId) => {
