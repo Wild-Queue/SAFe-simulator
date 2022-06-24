@@ -5,6 +5,9 @@
     width: 100%;
 }
 
+/*.base {
+}*/
+
 .base.NextButton{
     position: absolute;
     height: 10%;
@@ -21,9 +24,7 @@
     bottom: 20%;
 }
 
-.base {
 
-}
 
 .ConfirmButton{
     position: absolute;

@@ -4,7 +4,7 @@
 }
 
 .PI{
-    margin-outside: 2px;
+    /*margin-outside: 2px;*/
     display: flex;
     width: 100%;
     justify-content: space-between;
