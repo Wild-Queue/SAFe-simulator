@@ -3,10 +3,14 @@
     display: flex;
     height: 400px;
     width: 100%;
+    border: 2px solid red;
 }
 
-/*.base {
-}*/
+.CardImg{
+    position: relative;
+    width: 588px;
+    border: 2px solid red;
+}
 
 .base.NextButton{
     position: absolute;
@@ -24,7 +28,9 @@
     bottom: 20%;
 }
 
+.base {
 
+}
 
 .ConfirmButton{
     position: absolute;

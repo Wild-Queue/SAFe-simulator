@@ -32,11 +32,14 @@ const CurrentCard = (props) => {
 
     return (
         <div className="Card">
-            <img src={require('../images/' + f[cur] + '.jpg')} alt='' height="100%"/>
+            <div className="CardImg">
+                <img src={require('../images/' + f[cur] + '.jpg')} alt='' height="100%"/>
+                <Inputs cur = {cur} im = {f[cur]} size = {props.size} inputs = {inputs} setInputs = {setInputs}/>
+            </div>
             <button className="base NextButton" disabled={next} onClick={Next}>Next</button>
             <button className="base PrevButton" disabled={prev} onClick={Prev}>Prev</button>
             <button className="ConfirmButton" onClick={() => {props.pr(0); props.menu(1)}}>Confirm</button>
-            <Inputs cur = {cur} im = {f[cur]} size = {props.size} inputs = {inputs} setInputs = {setInputs}/>
+
         </div>
     );
 };
