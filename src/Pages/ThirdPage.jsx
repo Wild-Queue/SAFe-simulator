@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Card3 from "../Modals/Card3";
 import Board from "../Modals/Board";
-import "bootstrap/dist/css/bootstrap.css";
+import "../Styles/bootstrap/dist/css/bootstrap.css";
 import "../Styles/thirdModule.css";
 import Alert from "../Modals/Alert3";
 import {
