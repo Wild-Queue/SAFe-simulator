@@ -18,22 +18,22 @@
 }
 
 .Main.First{
-    left: 6.15%;
+    left: 9.1%;
 }
 
 .Main.Second{
-    left: 12.55%;
+    left: 18.1%;
 }
 
 .Main.Third{
-    left: 19.1%;
+    left: 27.3%;
 }
 
 .Sum{
     position: absolute;
     font-size: 25px;
     bottom: 19.6%;
-    left: 25.9%;
+    left: 36.4%;
     text-align: center;
     width: 45px;
 }
@@ -41,7 +41,7 @@
 .w{
     position: absolute;
     font-size: 26px;
-    left: 34.4%;
+    left: 48%;
     bottom: -42px;
     text-align: center;
     width: 60px;
