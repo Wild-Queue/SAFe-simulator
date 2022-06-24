@@ -1,0 +1,49 @@
+.menu{
+    display: flex;
+}
+
+.menu.off{
+    display: none;
+}
+
+.pr{
+    display: flex;
+}
+
+.pr.off{
+    display: none;
+}
+
+.road{
+    position: absolute;
+    left: 10%;
+    bottom: 50%;
+}
+
+.seeEp{
+    position: absolute;
+    left: 10%;
+    bottom: 30%
+}
+
+.features{
+    left: 10%;
+    bottom: 70%;
+    position: absolute;
+}
+
+.city{
+    height: 550px;
+    position: absolute;
+    left: 35%;
+    bottom: 15%;
+}
+
+.roadMap{
+    display: flex;
+
+}
+
+.roadMap.off{
+    display: none;
+}

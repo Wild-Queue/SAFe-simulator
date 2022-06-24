@@ -3,7 +3,7 @@ import '../Styles/FirstModule.css';
 import FirstModuleHeader from '../components/FirstModuleHeader';
 import FirstModuleBody from '../components/FirstModuleBody';
 
-function FirstModule() {
+function FirstModule({ChosenCards, PageChange }) {
 
   return (
     <div>
@@ -11,7 +11,7 @@ function FirstModule() {
         <FirstModuleHeader/>
       </div>
       <div className="FM_Body_external">
-        <FirstModuleBody/>
+        <FirstModuleBody ChosenCards = {ChosenCards}  PageChange = {PageChange}/>
       </div>
     </div>
   );

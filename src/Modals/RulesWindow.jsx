@@ -3,8 +3,8 @@ import '../Styles/RulesWindow.css'
 
 const RulesWindow = ({active, setActive, children}) => {
     return (
-        <div className = {active ? "model active": "modal"} onClick={() => setActive(false)}>
-            <div className={active ? "model__content active": "model__content"} onClick={e => e.stopPropagation()}>
+        <div className = {active ? "FP_model active": "FP_modal"} onClick={() => setActive(false)}>
+            <div className={active ? "FP_model__content active": "FP_model__content"} onClick={e => e.stopPropagation()}>
                 {children}
             </div>
         </div>

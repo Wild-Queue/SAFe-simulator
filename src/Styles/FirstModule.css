@@ -1,19 +1,22 @@
 * {
-    margin: 0;
+    margin: 0px;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 #root{
-    display: flex;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    display: block;
+    background-color: white;
     justify-content: center;
     object-position: center;
-    background-color: whitesmoke;
     box-sizing: content-box;
 }
 
 .FM_Header_external {
-    width: 100vw;
+    width:100vw;
     padding: 0;
     margin: 0;
 }
@@ -24,7 +27,7 @@
     color: whitesmoke;
     display: flex;
     padding: 1.7vh;
-    width: 100vw;
+    width: 100%;
     margin: 0;
     justify-content:space-between;
     align-items: center;
@@ -67,46 +70,64 @@
 
 .FM_Body_external{  
     align-items:center;
-    height: 180vw;
-    width: 100vw;
-    background-color: whitesmoke;
+    height: 100%;
+    width: 100%;
 }
 
 .FM_Body_internal{
     position:absolute;
     font-family:'Times New Roman', Times, serif;
     font-size: 25px;
-    height: 0vw;
-    width: 100vw;
+    width: 100%;
     color: black;
     columns: 2;
     justify-content:space-between;
     align-items: center;
 }
 
-.ColumnLeft{
+.FM_ColumnLeft{
     position:absolute;
     font-family:'Times New Roman', Times, serif;
     font-size: 2vw;
-    height: 40vw;
-    width: 48vw;
+    height: 43vw;
+    width: 52vw;
     color: black;
 }
 
-.ColumnRight{
+.FM_ColumnRight{
     position:absolute;
     font-family:'Times New Roman', Times, serif;
-    font-size: 25px;
+    font-size: 2vw;
+    margin-top: 2vw;
     height: 40vw;
-    width: 48vw;
+    width: 42vw;
     color: black;
-    margin-left: 49vw;
+    margin-left: 50vw;
 }
 
-.FM_Save_Bottom{
+.FM_ButtonColumnLeft{
+    position:absolute;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2vw;
+    height: 5vw;
+    width: 25%;
+    color: black;
+}
+
+.FM_ButtonColumnRight{
+    position:absolute;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2vw;
+    height: 5vw;
+    width: 25%;
+    color: black;
+    margin-left: 25vw;
+}
+
+.FM_Card_Button{
     padding: 2vw;
-    margin-top: 167vw;
-    margin-left: 41vw;
+    margin-top: 2vw;
+    margin-left: 10vw;
     background:rgb(29, 223, 22);
     border: 2px solid rgb(29, 223, 22);
     border-radius: 10px;
@@ -114,13 +135,61 @@
     font-size: 2.5vw;
 }
 
-.FM_Save_Bottom:hover{
+.FM_Card_Button:hover{
     padding: 2vw;
-    margin-top: 167vw;
-    margin-left: 41vw;
+    margin-top: 2vw;
+    margin-left: 10vw;
     background: darkgreen;
     border: 2px solid darkgreen;
     border-radius: 10px;
     color:white; 
     font-size: 2.5vw;
+}
+
+
+.FM_Save_Button{
+    position: relative;
+    padding: 1vw;
+    margin-top: 1vw;
+    margin-left: 86vw;
+    background:rgb(29, 223, 22);
+    border: 2px solid rgb(29, 223, 22);
+    border-radius: 10px;
+    color:white; 
+    font-size: 2vw;
+}
+
+.FM_Save_Button:hover{
+    padding: 1vw;
+    margin-top: 1vw;
+    margin-left: 86vw;
+    background: darkgreen;
+    border: 2px solid darkgreen;
+    border-radius: 10px;
+    color:white; 
+    font-size: 2vw;
+}
+
+
+.FM_Sort_Button{
+    position: relative;
+    padding: 0.5vw;
+    margin-top: 31vw;
+    margin-left: 86vw;
+    background:rgb(22, 149, 223);
+    border: 2px solid rgb(22, 149, 223);
+    border-radius: 10px;
+    color:white; 
+    font-size: 1.5vw;
+}
+
+.FM_Sort_Button:hover{
+    padding: 0.5vw;
+    margin-top: 31vw;
+    margin-left: 86vw;
+    background: darkblue;
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    color:white; 
+    font-size: 1.5vw;
 }

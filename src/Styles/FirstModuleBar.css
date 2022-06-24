@@ -1,0 +1,296 @@
+.FM_Richey_Button {
+    background: white;
+    background-image: url("../FirstModuleImages/Richey_Rich_Estate.png");
+    background-size: 100.6%, 100.5%;
+    height: 8.15vw;
+    width: 10vw;
+    margin-top: 0.25vw;
+    margin-left: 7vw;
+    background-repeat: no-repeat;
+    font-size: 12%;
+    filter: blur(2px);
+    z-index: 999;
+    transition: 0.5s;
+}
+
+.FM_Richey_Button:hover {
+    background: white;
+    background-image: url("../FirstModuleImages/Richey_Rich_Estate.png");
+    background-size: 100.6%, 100.5%;
+    height: 13vw;
+    width: 15.76vw;
+    margin-top: 0.25vw;
+    margin-left: 4.5vw;
+    background-repeat: no-repeat;
+    font-size: 20%;
+    filter: blur(0px);
+    transition: 0.5s;
+}
+
+.FM_Blueville_Button {
+    background: white;
+    background-image: url("../FirstModuleImages/Blueville_Estate.png");
+    background-size: 100.6%, 100.5%;
+    height: 8.15vw;
+    width: 10vw;
+    margin-top: 0.25vw;
+    margin-left: 7vw;
+    background-repeat: no-repeat;
+    font-size: 12%;
+    filter: blur(2px);
+    transition: 0.5s;
+}
+
+.FM_Blueville_Button:hover {
+    background: white;
+    background-image: url("../FirstModuleImages/Blueville_Estate.png");
+    background-size: 100.6%, 100.5%;
+    height: 13vw;
+    width: 15.76vw;
+    margin-top: 0.25vw;
+    margin-left: 4.5vw;
+    background-repeat: no-repeat;
+    font-size: 20%;
+    filter: blur(0px);
+    transition: 0.5s;
+}
+
+.FM_Downs_Button {
+    background: white;
+    background-image: url("../FirstModuleImages/White_Downs_Estate.png");
+    background-size: 100.6%, 100.5%;
+    height: 8.15vw;
+    width: 10vw;
+    margin-top: 0.25vw;
+    margin-left: 7vw;
+    background-repeat: no-repeat;
+    font-size: 12%;
+    filter: blur(2px);
+    transition: 0.5s;
+}
+
+.FM_Downs_Button:hover {
+    background: white;
+    background-image: url("../FirstModuleImages/White_Downs_Estate.png");
+    background-size: 100.6%, 100.5%;
+    height: 13vw;
+    width: 15.76vw;
+    margin-top: 0.25vw;
+    margin-left: 4.5vw;
+    background-repeat: no-repeat;
+    font-size: 20%;
+    filter: blur(0px);
+    transition: 0.5s;
+}
+
+.FM_Accommodation_Button {
+    background: white;
+    background-image: url("../FirstModuleImages/Scaled_Accommodation.png");
+    background-size: 100.6%, 100.5%;
+    height: 8.15vw;
+    width: 10vw;
+    margin-top: 0.25vw;
+    margin-left: 7vw;
+    background-repeat: no-repeat;
+    font-size: 12%;
+    filter: blur(2px);
+    transition: 0.5s;
+}
+
+.FM_Accommodation_Button:hover {
+    background: white;
+    background-image: url("../FirstModuleImages/Scaled_Accommodation.png");
+    background-size: 100.6%, 100.5%;
+    height: 13vw;
+    width: 15.76vw;
+    margin-top: 0.25vw;
+    margin-left: 4.5vw;
+    background-repeat: no-repeat;
+    font-size: 20%;
+    filter: blur(0px);
+    transition: 0.5s;
+}
+
+.FM_Extreme_Button {
+    background: white;
+    background-image: url("../FirstModuleImages/Extreme_Techology_Park.png");
+    background-size: 100.6%, 100.5%;
+    height: 8.15vw;
+    width: 10vw;
+    margin-top: 0.25vw;
+    margin-left: -4vw;
+    background-repeat: no-repeat;
+    font-size: 12%;
+    filter: blur(2px);
+    transition: 0.5s;
+}
+
+.FM_Extreme_Button:hover {
+    background: white;
+    background-image: url("../FirstModuleImages/Extreme_Techology_Park.png");
+    background-size: 100.6%, 100.5%;
+    height: 13vw;
+    width: 15.76vw;
+    margin-top: 0.25vw;
+    margin-left: -7.5vw;
+    background-repeat: no-repeat;
+    font-size: 20%;
+    filter: blur(0px);
+    transition: 0.5s;
+}
+
+.FM_ONeill_Button {
+    background: white;
+    background-image: url("../FirstModuleImages/ONeill_Monster_Mail.png");
+    background-size: 100.6%, 100.5%;
+    height: 8.15vw;
+    width: 10vw;
+    margin-top: 0.25vw;
+    margin-left: -4vw;
+    background-repeat: no-repeat;
+    font-size: 12%;
+    filter: blur(2px);
+    transition: 0.5s;
+}
+
+.FM_ONeill_Button:hover {
+    background: white;
+    background-image: url("../FirstModuleImages/ONeill_Monster_Mail.png");
+    background-size: 100.6%, 100.5%;
+    height: 13vw;
+    width: 15.76vw;
+    margin-top: 0.25vw;
+    margin-left: -7.5vw;
+    background-repeat: no-repeat;
+    font-size: 20%;
+    filter: blur(0px);
+    transition: 0.5s;
+}
+
+.FM_Lean_Button {
+    background: white;
+    background-image: url("../FirstModuleImages/Lean_Leisure_Health.png");
+    background-size: 100.6%, 100.5%;
+    height: 8.15vw;
+    width: 10vw;
+    margin-top: 0.25vw;
+    margin-left: -4vw;
+    background-repeat: no-repeat;
+    font-size: 12%;
+    filter: blur(2px);
+    transition: 0.5s;
+}
+
+.FM_Lean_Button:hover {
+    background: white;
+    background-image: url("../FirstModuleImages/Lean_Leisure_Health.png");
+    background-size: 100.6%, 100.5%;
+    height: 13vw;
+    width: 15.76vw;
+    margin-top: 0.25vw;
+    margin-left: -7.5vw;
+    background-repeat: no-repeat;
+    font-size: 20%;
+    filter: blur(0px);
+    transition: 0.5s;
+}
+
+.FM_Downtown_Button {
+    background: white;
+    background-image: url("../FirstModuleImages/Downtown_Shopping_Strip.png");
+    background-size: 100.6%, 100.5%;
+    height: 8.15vw;
+    width: 10vw;
+    margin-top: 0.25vw;
+    margin-left: -4vw;
+    background-repeat: no-repeat;
+    font-size: 12%;
+    filter: blur(2px);
+    transition: 0.5s;
+}
+
+.FM_Downtown_Button:hover {
+    background: white;
+    background-image: url("../FirstModuleImages/Downtown_Shopping_Strip.png");
+    background-size: 100.6%, 100.5%;
+    height: 13vw;
+    width: 15.75vw;
+    margin-top: 0.25vw;
+    margin-left: -7.5vw;
+    background-repeat: no-repeat;
+    font-size: 20%;
+    filter: blur(0px);
+    transition: 0.5s;
+}
+
+
+.FM_Input_Button_1 {
+    position: absolute;
+    top: 68%;
+    left: 15.5%;
+    height: 7%;
+    width: 8%;
+    border: 0px solid white;
+    font-size: 210%;
+    color: black;
+    text-align: center;
+    outline: none;
+    background-color: transparent;
+}
+
+.FM_Input_Button_2 {
+    position: absolute;
+    top: 68%;
+    left: 31.8%;
+    height: 7%;
+    width: 8%;
+    border: 0px solid white;
+    font-size: 210%;
+    color: black;
+    text-align: center;
+    outline: none;
+    background-color: transparent;
+}
+
+.FM_Input_Button_3 {
+    position: absolute;
+    top: 68%;
+    left: 48.5%;
+    height: 7%;
+    width: 8%;
+    border: 0px solid white;
+    font-size: 210%;
+    color: black;
+    text-align: center;
+    outline: none;
+    background-color: transparent;
+}
+
+.FM_Button_SumOfInputs{
+    position: absolute;
+    top: 68%;
+    left: 65%;
+    height: 7%;
+    width: 8%;
+    border: 0px solid white;
+    font-size: 200%;
+    color: black;
+    text-align: center;
+    outline: none;
+    background-color: transparent;
+}
+
+.FM_Button_WSHFRank {
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    top: 75%;
+    left: 86.3%;
+    color:black; 
+    background-color: white;
+    font-size: 200%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}

@@ -3,16 +3,16 @@ import '../Styles/FrontPage.css';
 import FrontPageHeader from '../components/FrontPageHeader';
 import FrontPageBody from '../components/FrontPageBody';
 
-function FrontPage() {
+function FrontPage({PageChange}) {
 
   return (
 
     <div>
-      <div className="Header_external">
+      <div className="FP_Header_external">
         <FrontPageHeader/>
       </div>
-      <div className="Body_external">
-        <FrontPageBody/>
+      <div className="FP_Body_external">
+        <FrontPageBody  PageChange = {PageChange}/>
       </div>
     </div>
   );

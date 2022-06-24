@@ -1,7 +1,16 @@
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 .FM_Input_1{
     position:absolute;
-    top: 24.9vw;
-    left: 6vw;
+    top: 27.2vw;
+    left: 6.8vw;
     height: 6.5vw;
     width: 7.4vw;
     border: 0px solid white;
@@ -14,8 +23,8 @@
 
 .FM_Input_2{
     position: absolute;
-    top: 24.9vw;
-    left: 13.7vw;
+    top: 27.2vw;
+    left: 15vw;
     height: 6.5vw;
     width: 7.4vw;
     border: 0px solid white;
@@ -28,8 +37,8 @@
 
 .FM_Input_3{
     position: absolute;
-    top: 24.9vw;
-    left: 21.6vw;
+    top: 27.2vw;
+    left: 23.6vw;
     height: 6.5vw;
     width: 7.4vw;
     border: 0px solid white;
@@ -40,29 +49,29 @@
     background-color: transparent;
 }
 
-.WSHFRank{
+.FM_SumOfInputs{
     position: absolute;
-    top: 29.5vw;
-    left: 41.4vw;
     height: 4vw;
-    width: 4.5vw;
+    width: 4vw;
+    top: 28.5vw;
+    left: 34vw;
     color:black; 
-    background-color: white;
-    font-size: 1.16vw;
+    font-size: 2.5vw;
     display: flex;
     justify-content: center;
     align-items:center;
     text-align: center;
 }
 
-.SumOfInputs{
+.FM_WSHFRank{
     position: absolute;
+    top: 32vw;
+    left: 45vw;
     height: 4vw;
-    width: 4vw;
-    top: 26.1vw;
-    left: 31.1vw;
+    width: 4.5vw;
     color:black; 
-    font-size: 1.3vw;
+    background-color: white;
+    font-size: 2.5vw;
     display: flex;
     justify-content: center;
     align-items:center;
@@ -72,7 +81,7 @@
 .FM_Card__Content{
     position: absolute;
     font-family:'Times New Roman', Times, serif;
-    font-size: 25px;
+    font-size: 25vw;
     height: 40vh;
     width: 50vw;
     color: black;

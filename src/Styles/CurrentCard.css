@@ -1,0 +1,34 @@
+.Card{
+    position: relative;
+    display: flex;
+    height: 400px;
+    width: 100%;
+}
+
+.base.NextButton{
+    position: absolute;
+    height: 10%;
+    width: 20%;
+    left: 50%;
+    bottom: 40%;
+}
+
+.base.PrevButton {
+    position: absolute;
+    height: 10%;
+    width: 20%;
+    left: 50%;
+    bottom: 20%;
+}
+
+.base {
+
+}
+
+.ConfirmButton{
+    position: absolute;
+    left: 50%;
+    height: 10%;
+    width: 20%;
+    bottom: 60%
+}

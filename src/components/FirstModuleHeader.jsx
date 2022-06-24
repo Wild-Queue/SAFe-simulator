@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import "../Styles/FirstModule.css"
-import RulesWindow from '../Modals/RulesWindow';
+import RulesWindowModules from '../Modals/RulesWindowModules';
 
 const FirstModuleHeader = function () {
-    const [modalActive, setModalActive] = useState(false)
+    const [modalActive, setModalActive] = useState(true)
 
     function MoveHome() {
         window.location.assign('../');
@@ -12,15 +12,78 @@ const FirstModuleHeader = function () {
     return (
         <div>
             <div className='FM_Header_internal'>
-                <h1> S.A.F.e Simulator Module 1</h1>
+                <h1> S.A.F.e Simulator</h1>
                 <div>
                     <button onClick={MoveHome} className='FM_Home_Bottom'> Домой</button>
                     <button onClick={() => setModalActive(true)} className='FM_Rules_Bottom'> Описание модуля </button>
                 </div>
             </div>
-            <RulesWindow active={modalActive} setActive={setModalActive}>
-                Описание
-            </RulesWindow>
+            <RulesWindowModules active={modalActive} setActive={setModalActive}>
+                <h1 style={{ textAlign: "center", fontSize: "250%" }}>1 модуль</h1>
+                <div style={{ textIndent: "1em", fontSize: "155%", marginLeft: "1%" }}>
+                    <h3>Ваши специалисты по исследованию рынка определили первые 9 основных возможностей развития города, провели исследование рынка и планирование, чтобы составить мнение о потенциальной прибыли и объеме необходимых усилий.  Эти возможности - "Эпики", и ваша цель - применить алгоритм Weighted Shortest Job First для определения их приоритетности.</h3>
+                    <br />
+                    <p>Чтобы применить алгоритм Weighted Shortest Job First, введем новые понятия. Cost of Delay(Стоимость задержки) - это цена возможности между тем, чтобы получить что-то сейчас, и тем, чтобы получить это позже. Стоимость задержки рассчитывается путем оценки последствий отсутствия чего-либо, когда это необходимо.  В качестве типичного примера можно привести затраты, понесенные в ожидании поставки решения, повышающего эффективность.
+                        <br />
+                    </p>
+                    <p>
+                        Важно помнить, что мы блокируем ресурс всякий раз, когда обслуживаем задание.  Выгода от немедленного обслуживания любого задания - это экономия затрат на задержку, а затраты - это время, на которое мы блокируем ресурсы.  И затраты, и выгода должны входить в экономически правильную последовательность действий.
+                        <br />
+                        <br />
+                    </p>
+                        <div style={{textAlign: "center"}}>WSJF = COD/Длительность
+                            <br />
+                            Cost of Delay = Business Value + Timing Value + Risk Reduction|Opportunity Enablement Value
+                            <br />
+                            Duration = Size (in story points)
+                        </div>
+                    <p>
+                        <br />
+                        <br />
+                        User|Business Value:
+                        <br />
+                        -Влияние на доходы
+                        <br />
+                        -Потенциальный штраф или другое негативное воздействие
+                        <br />
+                        -Они предпочитают это, а не то
+                        <br />
+                        <br />
+
+                        Time Criticality:
+                        <br />
+                        Есть ли определенный срок
+                        <br />
+                        -Будут ли они ждать нас или перейдут на другое решение
+                        <br />
+                        -Каково текущее влияние на удовлетворенность клиентов
+                        <br />
+                        <br />
+
+                        Risk Reduction & Opportunity Enablement:
+                        <br />
+                        Снизить риск этой или будущей поставки
+                        <br />
+                        -Есть ли ценность в информации, которую мы получим
+                        <br />
+                        -Открыть новые возможности для бизнеса
+                        <br />
+                        <br />
+                        
+                        <b>Инструкция к 1 модулю:</b>
+                        <br />
+                        1.Начните с рассмотрения всех Эпиков как группы.
+                        <br />
+                        2.Определите относительную ценность каждого Эпика с точки зрения снижения рисков и расширения возможностей, используя относительную оценку ("1" имеет наименьшую косвенную ценность).
+                        <br />
+                        3.Определите относительную критичность по срокам для каждого Эпика, используя относительную оценку ("1" - наименее критичен по времени).
+                        <br />
+                        4.Определите относительную бизнес-ценность каждого Эпика, используя относительную оценку.  ("1" - наименьшая бизнес-ценность)
+                        <br />
+                        5.Завершите математические вычисления и выстройте карты в ряд от наивысшего до наименьшего балла WSJF.
+                    </p>
+                </div>
+            </RulesWindowModules>
         </div>
     )
 }
