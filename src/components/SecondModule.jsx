@@ -9,7 +9,8 @@ const SecondModule = (props) => {
     let [prActive, setPrActive] = useState(0);
     let [roadActive, setRoadActive] = useState(0);
 
-    let ep = Object.assign([], props.ep);;
+    console.log(props.ep);
+    let ep = Object.assign([], props.ep);
     let feat = [];
 
     let size = [

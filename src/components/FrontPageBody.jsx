@@ -14,7 +14,7 @@ const FrontPageBody = function ({PageChange}) {
             <img className='FP_SAFeImg' alt={"SAFe picture"} src={Image} />
             <div className='FP_Body_internal'>
                 <h1 style={{ fontSize: "2vw" }}>
-                    <b>S.A.F.e Simulator - это симулятор, который позволит вам в игровой форме познакомиться с основами SAFe. <br /></b>
+                    SAFe Simulator - это симулятор, который позволит вам в игровой форме познакомиться с основами SAFe. <br />
                 </h1>
             </div>
             <div className='FP_Body_internal'>

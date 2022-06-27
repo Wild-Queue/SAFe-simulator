@@ -68,7 +68,7 @@ const Card = ({ CardName, data, ImageName }) => {
     }
 
     function Calculate(event, inputNum) {
-        if (event.target.value.length < 4 && (isInt(event.target.value) || event.target.value === '')) {
+        if (event.target.value.length < 4 && ((isInt(event.target.value) && ['1', '2', '3', '5', '8', '13', '21'].includes(event.target.value)) || event.target.value === '')) {
 
 
             switch (inputNum) {

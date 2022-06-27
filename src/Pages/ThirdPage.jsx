@@ -13,7 +13,7 @@ import Sprint3 from "../Modals/Sprint3";
 
 import FirstModuleHeader from "../components/FirstModuleHeader";
 
-class ThirdPage extends Component {
+class ThirdPage  extends Component {
   state = {
     cardsData: {},
     sprints: [],
@@ -160,7 +160,7 @@ class ThirdPage extends Component {
       <React.Fragment>
         <div className="top-stuck">
           <div className="d-flex flex-column">
-            <FirstModuleHeader />
+            <FirstModuleHeader PageChange = {this.props.PageChange}/>
             <div className="alerts-container3">
               {dependantCardId && (
                 <Alert

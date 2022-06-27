@@ -9,7 +9,7 @@ function App() {
   const [Page, setPage] = useState('0');
   let PageChange = { page: Page, setPage: setPage };
 
-  let [epic, setEpic] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  let [epic, setEpic] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
   let ChosenCards = { epic: epic, setEpic: setEpic };
 
   let [PI, setPi] = useState([]);
@@ -19,7 +19,7 @@ function App() {
       {Page === '0' ? <FrontPage PageChange={PageChange} /> : null}
       {Page === '1' ? <FirstModule ChosenCards={ChosenCards} PageChange={PageChange} /> : null}
       {Page === '2' ? <SecondModule ep={ChosenCards.epic} Pi={setPi} PageChange = {PageChange} /> : null}
-      {Page === '3' ? <ThirdPage /> : null}
+      {Page === '3' ? <ThirdPage PageChange = {PageChange}/> : null}
 
     </div>
 

@@ -26,22 +26,25 @@ const FirstModuleBody = function ({ ChosenCards,  PageChange }) {
         SortBar();
         let ep = Object.assign([], ChosenCards.epic);
 
+        let first = -1;
+        let second = -1;
+
         switch (ButtonsAgrumentLeft[3].DispaingImage) {
             case "Accommodation":
                 //ChosenCards.Accommodation = false;
-                ep.splice(4, 1);
+                first = 3;
                 break;
             case "Downs":
                 //ChosenCards.Downs = false;
-                ep.splice(6, 1);
+                first = 5;
                 break;
             case "Blueville":
                 //ChosenCards.Blueville = false;
-                ep.splice(3, 1);
+                first = 2;
                 break;
             case "Richey":
                 //ChosenCards.Richey = false;
-                ep.splice(1, 1);
+                first = 0;
                 break;
             default:
                 console.log("Card selection Error");
@@ -49,23 +52,26 @@ const FirstModuleBody = function ({ ChosenCards,  PageChange }) {
         switch (ButtonsAgrumentRight[3].DispaingImage) {
             case "Downtown":
                 //ChosenCards.Downtown = false;
-                ep.splice(8, 1);
+                second = 7;
                 break;
             case "Lean":
                 //ChosenCards.Lean = false;
-                ep.splice(3, 1);
+                second = 2;
                 break;
             case "ONeill":
                 //ChosenCards.ONeill = false;
-                ep.splice(5, 1);
+                second = 4;
                 break;
             case "Extreme":
                 //ChosenCards.Extreme = false;
-                ep.splice(7, 1);
+                second = 6;
                 break;
             default:
                 console.log("Card selection Error");
         };
+
+        ep.splice(Math.min(first, second), 1);
+        ep.splice(Math.max(first, second) - 1, 1);
         ChosenCards.setEpic(ep);
         //window.location.assign('/SecondModule');
         PageChange.setPage('2');

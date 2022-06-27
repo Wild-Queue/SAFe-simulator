@@ -8,7 +8,7 @@ const FrontPageHeader = function () {
     return (
         <div>
             <div className='FP_Header_internal'>
-                <h1> S.A.F.e Simulator</h1>
+                <h1> SAFe Simulator</h1>
                 <button onClick={() => setModalActive(true)} className='FP_Rules_Bottom'> Правила игры </button>
             </div>
             <RulesWindow active={modalActive} setActive={setModalActive}>

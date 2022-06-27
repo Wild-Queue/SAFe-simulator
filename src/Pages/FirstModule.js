@@ -8,7 +8,7 @@ function FirstModule({ChosenCards, PageChange }) {
   return (
     <div>
       <div className="FM_Header_external">
-        <FirstModuleHeader/>
+        <FirstModuleHeader PageChange = {PageChange}/>
       </div>
       <div className="FM_Body_external">
         <FirstModuleBody ChosenCards = {ChosenCards}  PageChange = {PageChange}/>
