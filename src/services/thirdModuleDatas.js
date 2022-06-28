@@ -1,4 +1,4 @@
-const sprints = [[], [], [], [], [], []];
+const sprints = [[], [], [], [], []];
 
 const featuresMapper = {
   "01": { epic: " ", feature: "Медицинский центр" },
