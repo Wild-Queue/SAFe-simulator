@@ -9,7 +9,7 @@ const FirstModuleHeader = function ({ PageChange }) {
     const [modalActive, setModalActive] = useState(true)
 
     function MoveHome() {
-        window.location.assign('../');
+        PageChange.setPage('0');
     }
 
     function Back() {

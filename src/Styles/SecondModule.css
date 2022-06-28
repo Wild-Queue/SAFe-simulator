@@ -1,5 +1,12 @@
 .menu{
-    display: flex;
+    position: absolute;
+    border: 3px solid red;
+    border-radius: 40px;
+    background-color: rgba(115, 34, 34, 0.95);
+    bottom: 8%;
+    left: 12%;
+    height: 75vh;
+    width: 40vw;
 }
 
 .menu.off{
@@ -15,28 +22,71 @@
 }
 
 .road{
+    font-size: 25px;
     position: absolute;
+    border-radius: 12px;
+    height: 10vh;
+    width: 13vw;
+    background-color: orange;
     left: 10%;
-    bottom: 50%;
+    bottom: 45%;
+    cursor: pointer;
 }
 
-.seeEp{
-    position: absolute;
-    left: 10%;
-    bottom: 30%
+.road:disabled{
+    opacity: 0.7;
+    background-color: burlywood;
+    cursor: default;
 }
 
-.features{
-    left: 10%;
-    bottom: 70%;
-    position: absolute;
+.road:hover:enabled{
+    background-color: chocolate;
 }
+
+.nextModule{
+    position: absolute;
+    left: 10%;
+    bottom: 15%;
+    font-size: 25px;
+    height: 10vh;
+    width: 13vw;
+    border-radius: 12px;
+    background-color: orange;
+    cursor: pointer;
+}
+
+.nextModule:disabled{
+    background-color: burlywood;
+    opacity: 0.7;
+    cursor: default;
+}
+
+.nextModule:hover:enabled{
+    background-color: chocolate;
+}
+
+.featuresMenu{
+    font-size: 25px;
+    height: 10vh;
+    width: 13vw;
+    border-radius: 12px;
+    background-color: orange;
+    left: 10%;
+    bottom: 75%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.featuresMenu:hover{
+    background-color: chocolate;
+}
+
 
 .city{
     height: 550px;
     position: absolute;
     left: 35%;
-    bottom: 15%;
+    bottom: 10%;
 }
 
 .roadMap{
@@ -45,5 +95,47 @@
 }
 
 .roadMap.off{
+    display: none;
+}
+
+.ShellSecondModule{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header22{
+
+}
+
+.header22.off{
+    display: none;
+}
+
+.arrowBlue{
+    position: absolute;
+    height: 12vh;
+    left: 50%;
+}
+
+.arrowBlue.fir{
+    top: 10%;
+}
+
+.arrowBlue.sec{
+    transition: 1s;
+    top: 40%;
+}
+
+.arrowBlue.thr{
+    transition: 1s;
+    top: 70%;
+}
+
+.backGround{
+
+}
+
+.backGround.off{
     display: none;
 }

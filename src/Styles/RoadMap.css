@@ -1,18 +1,17 @@
 .RoadShell{
-    width: 100%;
+    width: 97vw;
     /*height: 100px;*/
 }
 
 .PI{
-    /*margin-outside: 2px;*/
+    margin-outside: 2px;
     display: flex;
-    width: 100%;
+    width: 97vw;
     justify-content: space-between;
-    /*height: 600px;*/
 }
 
 .PI1{
-    width: 32%;
+    width: 30vw;
 }
 
 .sz{
@@ -41,13 +40,16 @@
     margin-top: 6px;
     left: 50%;
     position: relative;
-
 }
 
 .feature{
-    height: 140px;
+    height: 16.9vh;
     margin-left: 25px;
     margin-top: 8px;
     cursor: grab;
     margin-bottom: 7px;
+}
+
+::-webkit-scrollbar{
+    width: 0;
 }

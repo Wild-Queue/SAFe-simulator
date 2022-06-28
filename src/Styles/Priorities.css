@@ -1,0 +1,185 @@
+.shadow{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s;
+}
+
+.shadow.off{
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+
+.epic{
+    height: 70vh;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    transition: 0.3s;
+    filter: blur();
+    z-index: 2;
+}
+
+.epic.blur{
+    filter: blur(10px);
+    transition: 0.3s;
+}
+
+.listFeatures{
+    position: relative;
+    display: flex;
+    height: 90vh;
+}
+
+.featuresField{
+    background-color: rgba(118, 116, 130, 0.13);
+    border: 3px solid blue;
+    width: 44vw;
+    padding: 0.5%;
+    margin-left: 5%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    border-radius: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: 0.5s;
+    z-index: 0;
+}
+
+.featuresField.off{
+    transform-origin: center;
+    transform: scaleY(0);
+    transition: 0.5s;
+}
+
+.featuresField.sq{
+    transform: scaleY(0);
+    transition: 0.3s;
+}
+
+.imFeature{
+    font-size: 1.1vh;
+    position: relative;
+    height: 24vh;
+    margin-left: 2.9vw;
+    margin-top: 1.8vh;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.2s;
+    z-index: 0;
+}
+
+.imFeature:hover{
+    height: 26vh;
+    transition: 0.2s;
+}
+
+.imFeatureChosen{
+    position: absolute;
+}
+
+.styleSelected{
+    position: absolute;
+    left: 50%;
+    bottom: 26%;
+    height: 58vh;
+    z-index: 20;
+    transition: 0.7s;
+    transform: scale(1);
+    font-size: 2.3vh;
+    cursor: grab;
+}
+
+.styleSelected.off{
+    transform-origin: center;
+    transition: 0.7s;
+    transform: scaleX(0);
+}
+
+.epicVal{
+    font-size: 3.9vh;
+    position: absolute;
+    bottom: 25.5%;
+    text-align: center;
+    width: 2.5vw;
+}
+
+.epicVal.fir{
+    left: 17%;
+}
+
+.epicVal.sec{
+    left: 33.2%
+}
+
+.epicVal.thr{
+    left: 49.7%
+}
+
+.epicVal.sum{
+    left: 66%;
+}
+
+.ww{
+    font-size: 4.4vh;
+    position: absolute;
+    bottom: 17%;
+    text-align: center;
+    width: 2.5vw;
+    left: 87.7%;
+}
+
+.leftArrow{
+    position: absolute;
+    height: 8vh;
+    bottom: 5%;
+    left: 2%;
+    cursor: pointer;
+}
+
+.leftArrow.off{
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.rightArrow{
+    cursor: pointer;
+    position: absolute;
+    height: 8vh;
+    bottom: 5.2%;
+    left: 7%
+}
+
+.rightArrow.off{
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.buttonShellPriority{
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+}
+
+.confirmPriority{
+    border-radius: 10px;
+    background-color: green;
+    font-size: 20px;
+    height: 7vh;
+    width: 12vw;
+    color: white;
+    cursor: pointer;
+}
+
+.confirmPriority:hover{
+    background-color: darkgreen;
+}
+

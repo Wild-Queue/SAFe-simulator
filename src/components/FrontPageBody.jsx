@@ -17,7 +17,7 @@ const FrontPageBody = function ({PageChange}) {
                     SAFe Simulator - это симулятор, который позволит вам в игровой форме познакомиться с основами SAFe. <br />
                 </h1>
             </div>
-            <div className='FP_Body_internal'>
+            <div className='FP_Body_internal' style={{marginTop: "-4%"}}>
                 <h4 style={{ fontSize: "2vw" }}>
                     Показываем людям, что такое Scaled Agile Framwork и как с ним работать.
                 </h4>

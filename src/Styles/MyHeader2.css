@@ -1,0 +1,60 @@
+.homePriority{
+    position: absolute;
+    right: 11%;
+    bottom: 30%;
+}
+
+.readModulePriority{
+    position: absolute;
+    bottom: 30%;
+    right: 1%;
+}
+
+.buttonHomePriority{
+    background-color: black;
+    border-radius: 7px;
+    height: 4vh;
+    width: 5vw;
+    color: orange;
+    border: 1px solid orange;
+    cursor: pointer;
+}
+
+.buttonModulePriority{
+    background-color: black;
+    color: green;
+    border: 1px solid green;
+    border-radius: 7px;
+    height: 4vh;
+    width: 9vw;
+    cursor: pointer;
+}
+
+.buttonHomePriority:hover{
+    background-color: orange;
+    color: black;
+}
+
+.buttonModulePriority:hover{
+    background-color: green;
+    color:black
+}
+
+.moduleName{
+    margin-top: 1.4vh;
+    margin-left: 2vw;
+    font-style: italic;
+    font-family: "Calisto MT", serif;
+}
+
+.headerPriority{
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 0.9%;
+    color: white;
+}

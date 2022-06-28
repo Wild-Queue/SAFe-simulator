@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import '../Styles/RoadMap.css'
+import {timeout} from "../Globals/global";
+import MyHeader2 from "./MyHeader2";
 
 const RoadMap = (props) => {
 
@@ -54,7 +56,12 @@ const RoadMap = (props) => {
     }
 
     return (
+
+
         <div className="RoadShell">
+
+            <MyHeader2/>
+
             <div className="PI">
                 {fields.map(field =>
                     <div className="PI1">
@@ -89,7 +96,14 @@ const RoadMap = (props) => {
                 )}
             </div>
 
-            <button className="roadConfirm" onClick={() => {props.road(0); props.menu(1); props.Pi(fields[0].list); props.PageChange.setPage('3')}}> Confirm</button>
+            <button className="roadConfirm" onClick={async () =>
+            {props.road(0); props.menu(1);
+             props.Pi(fields[0].list);
+             props.arrow('arrowBlue sec');
+             await timeout(200);
+             props.arrow('arrowBlue thr')
+             await timeout(200);
+             props.nextModule(false)}}> Confirm</button>
 
         </div>
     );

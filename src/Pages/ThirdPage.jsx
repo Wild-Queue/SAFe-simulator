@@ -8,12 +8,13 @@ import {
   getCards3,
   getSprints3,
   getEpicsColor,
+  getFeaturesMapper,
 } from "../services/thirdModuleDatas";
 import Sprint3 from "../Modals/Sprint3";
 
 import FirstModuleHeader from "../components/FirstModuleHeader";
 
-class ThirdPage  extends Component {
+class ThirdPage extends Component {
   state = {
     cardsData: {},
     sprints: [],
@@ -49,9 +50,30 @@ class ThirdPage  extends Component {
     const sprints = getSprints3();
     const cardSprint = {};
     const epicsColor = getEpicsColor();
+    const featuresMapper = getFeaturesMapper();
+    console.log(this.props.features);
+    const features = this.props.features;
+    let loadedCounter = 0;
     cards.forEach((cardData) => {
-      cardsData[cardData.id] = cardData;
+      let isFoundInFeatures = false;
+      features.forEach((code) => {
+        if (
+          cardData.epic === featuresMapper[code].epic &&
+          cardData.feature === featuresMapper[code].feature
+        ) {
+          isFoundInFeatures = true;
+        }
+      });
+      if (isFoundInFeatures) cardsData[cardData.id] = cardData;
+      loadedCounter += isFoundInFeatures;
     });
+    console.log(
+      "From " +
+        cards.length +
+        " cards, " +
+        loadedCounter +
+        " of them have been loaded based on the received list of features!"
+    );
     sprints.forEach((sprint, index) => {
       sprint.forEach((cardId) => {
         cardSprint[cardId] = index;
