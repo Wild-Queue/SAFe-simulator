@@ -32,7 +32,7 @@ function App() {
     <div>
       {Page === '0' ? <FrontPage PageChange={PageChange} /> : null}
       {Page === '1' ? <FirstModule ChosenCards={ChosenCards} PageChange={PageChange} dataButtonLeft = {dataButtonLeft} dataButtonRight = {dataButtonRight} /> : null}
-      {Page === '2' ? <SecondModule ep={ChosenCards.epic} Pi={setPi} PageChange = {PageChange} left = {dataButtonLeft.ButtonsAgrument} right = {dataButtonRight.ButtonsAgrument} /> : null}
+      {Page === '2' ? <SecondModule ep={ChosenCards.epic} Pi={setPi} PiArr = {PI} PageChange = {PageChange} left = {dataButtonLeft.ButtonsAgrument} right = {dataButtonRight.ButtonsAgrument} /> : null}
       {Page === '3' ? <ThirdPage PageChange = {PageChange} features=/*{["01","21","32","34","41","61","63","71","72","81","91",]}*/{PI}/> : null}
 
     </div>

@@ -18,6 +18,17 @@ const SecondModule = (props) => {
     let ep = props.ep;
     let feat = [];
 
+    function NextPage() {
+        let clone = [];
+        for (let i = 0; i < props.PiArr.length; i++){
+            if (["01","21","32","34","41","61","63","71","72","81","91"].includes(props.PiArr[i])){
+                clone.push(props.PiArr[i]);
+            }
+        }  
+        props.Pi(clone);
+        props.PageChange.setPage('3');
+    }
+
     for (let i = 0; i < ep.length; i++) {
         for(let j = 0;j < szFeatures[ep[i]]; j++)
             feat.push("" + ep[i] + (j + 1));
@@ -71,7 +82,7 @@ const SecondModule = (props) => {
                 <button className="featuresMenu" onClick={ () => {setMenuActive(0); setPrActive(1) }}>
                     Расставить приоритеты</button>
                 <button disabled={roadButton} className="road" onClick={() => {setMenuActive(0); setRoadActive(1)}}>Дорожная карта</button>
-                <button disabled={nextModule} className="nextModule" onClick={() => props.PageChange.setPage('3')}>Следующий модуль</button>
+                <button disabled={nextModule} className="nextModule" onClick={() => NextPage()}>Следующий модуль</button>
                 <div className={arrowStyle}>
                     <img height="100%" alt="" src={require('../images/BlueArrow.png')}/>
                 </div>
