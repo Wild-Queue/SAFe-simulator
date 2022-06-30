@@ -1,9 +1,11 @@
 .RoadShell{
-    width: 97vw;
+    width: 98vw;
     /*height: 100px;*/
 }
 
 .PI{
+    margin-left: 1vw;
+    margin-top: 2vh;
     margin-outside: 2px;
     display: flex;
     width: 97vw;
@@ -21,6 +23,7 @@
 
 .field{
     display: flex;
+    align-content: flex-start;
     border: 3px solid blue;
     min-height: 100px;
     border-radius: 12px 12px 12px 12px;
@@ -28,6 +31,7 @@
 }
 
 .cardField{
+    margin-left: 1vw;
     margin-top: 12px;
     border: 3px solid green;
     border-radius: 12px 12px 12px 12px;
@@ -37,17 +41,28 @@
 }
 
 .roadConfirm{
-    margin-top: 6px;
-    left: 50%;
+    margin-top: 2vh;
     position: relative;
+    left: 45%;
+    border-radius: 10px;
+    background-color: green;
+    font-size: 20px;
+    height: 7vh;
+    width: 12vw;
+    color: white;
+    cursor: pointer;
+}
+
+.roadConfirm:hover{
+    background-color: darkgreen;
 }
 
 .feature{
     height: 16.9vh;
-    margin-left: 25px;
-    margin-top: 8px;
+    margin-left: 1.7vw;
+    margin-top: 1.1vh;
     cursor: grab;
-    margin-bottom: 7px;
+    margin-bottom: 0.8vh;
 }
 
 ::-webkit-scrollbar{
