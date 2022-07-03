@@ -158,6 +158,19 @@ class ThirdPage extends Component {
     this.setState({ cardSprint, sprints });
   };
 
+  handleSaveButton = () => {
+    const div = document.getElementById("finish3");
+    if (div) {
+      div.classList.remove("display-none");
+      const scoreDiv = document.getElementById("score");
+      let totalScore = 0;
+      this.state.sprints.forEach((sprint) => {
+        totalScore += this.getSprintSize(sprint);
+      });
+      scoreDiv.innerHTML = totalScore;
+    }
+  };
+
   render() {
     const {
       cardsData,
@@ -180,6 +193,35 @@ class ThirdPage extends Component {
     return (
       <React.Fragment>
         <div className="top-stuck">
+          <div
+            className="dark-background3 display-none"
+            id="finish3"
+            onClick={(event) => {
+              event.stopPropagation();
+              event.target.classList.add("display-none");
+            }}
+          >
+            <div
+              className="finish-window3 d-flex justify-content-center align-items-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div>
+                <div className="text-center" style={{ fontSize: "5rem" }}>
+                  Вы набрали
+                </div>
+                <div
+                  className="text-center"
+                  style={{ fontSize: "9rem", fontWeight: "bold" }}
+                  id="score"
+                >
+                  14
+                </div>
+                <div className="text-center" style={{ fontSize: "5rem" }}>
+                  очков!
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="d-flex flex-column">
             <FirstModuleHeader />
             <div className="alerts-container3">
@@ -199,26 +241,34 @@ class ThirdPage extends Component {
                 ></Alert>
               )}
             </div>
-            <div className="d-flex align-items-stratch mx-auto mt-5">
-              {sprints.map((sprint, index) => (
-                <Sprint3
-                  onCardDrop={(cardId) => this.handleCardDrop(cardId, index)}
-                  key={index}
-                  cards={sprintsCards[index]}
-                  className="d-flex flex-column align-items-center m-3 rounded pb-5 sprint"
-                >
-                  <h4 className="sprint-heading text-center">
-                    Спринт {index + 1}{" "}
-                    {sprintsSizes[index] ? (
-                      <span className="badge rounded-pill bg-white text-dark border">
-                        {sprintsSizes[index]}
-                      </span>
-                    ) : (
-                      ""
-                    )}
-                  </h4>
-                </Sprint3>
-              ))}
+            <div className="container">
+              <div className="d-flex align-items-stratch mx-auto mt-5">
+                {sprints.map((sprint, index) => (
+                  <Sprint3
+                    onCardDrop={(cardId) => this.handleCardDrop(cardId, index)}
+                    key={index}
+                    cards={sprintsCards[index]}
+                    className="d-flex flex-column align-items-center m-3 rounded pb-5 sprint"
+                  >
+                    <h4 className="sprint-heading text-center">
+                      Спринт {index + 1}{" "}
+                      {sprintsSizes[index] ? (
+                        <span className="badge rounded-pill bg-white text-dark border">
+                          {sprintsSizes[index]}
+                        </span>
+                      ) : (
+                        ""
+                      )}
+                    </h4>
+                  </Sprint3>
+                ))}
+              </div>
+              <button
+                className="btn btn-primary btn-lg px-5 fs-1 mt-5 mb-5"
+                onClick={this.handleSaveButton}
+              >
+                Завершит
+              </button>
             </div>
           </div>
         </div>

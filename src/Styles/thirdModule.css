@@ -85,3 +85,25 @@ html {
   display: flex;
   flex-direction: column;
 }
+
+.dark-background3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000005a;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 5000;
+}
+.finish-window3 {
+  background-color: white;
+  width: 60%;
+  height: 80%;
+  border-radius: 10px;
+}
+.display-none {
+  display: none;
+}
