@@ -7,21 +7,6 @@ import ThirdPage from './Pages/ThirdPage';
 
 function App() {
 
-  useEffect(
-    () => {
-      fetch("http://localhost:5000").then(
-        res => {
-          res.json();
-          console.log(res)
-        }
-      ).then(
-        data => {
-          console.log(data)
-        }
-      )
-    }, []
-  )
-
   // 1 - input-1; 2 - input-2; 3 - input-3; 4 - CoD; 5 - WSJF Rank
   const [ButtonsAgrumentLeft, setButtonsAgrumentLeft] = useState([{ id: 0, Style: 'FM_Richey_Button', DispaingImage: "Richey", Input: ['0', '0', '0', '0', '0'] },
   { id: 2, Style: 'FM_Blueville_Button', DispaingImage: "Blueville", Input: ['0', '0', '0', '0', '0'] },

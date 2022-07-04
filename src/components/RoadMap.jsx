@@ -108,9 +108,9 @@ const RoadMap = (props) => {
 
     function NextPage() {
         let clone = [];
-        for (let i = 0; i < props.PiArr.length; i++){
-            if (["01","21","32","34","41","61","63","71","72","81","91"].includes(props.PiArr[i])){
-                clone.push(props.PiArr[i]);
+        for (let i = 0; i < fields[0].list.length; i++){
+            if (['01','21','32','34','41','61','63','71','72','81','91'].includes(fields[0].list[i])){
+                clone.push(fields[0].list[i]);
             }
         }  
         props.Pi(clone);
