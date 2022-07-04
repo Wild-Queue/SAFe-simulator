@@ -72,7 +72,7 @@ const SecondModule = (props) => {
                 <RoadMap road={setRoadActive} menu={setMenuActive}
                          features={feat} Pi = {props.Pi} arrow={setArrowStyle}
                          nextModule={setNextModule} inputs={inputs} setInputs={setInputs}
-                         PageChange={props.PageChange} PiArr={props.PiArr} />
+                         PageChange={props.PageChange} />
             </div>
 
             <div className = {menuActive ? 'menu' : 'menu off'}>
