@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import '../Styles/SecondModule.css'
-import RoadMap from "./RoadMap";
-import Priorities from "./Priorities";
+import RoadMap from "../components/RoadMap";
+import Priorities from "../components/Priorities";
 import {szFeatures} from '../Globals/global';
-import MyHeader2 from "./MyHeader2";
+import MyHeader2 from "../components/MyHeader2";
 import Back from '../images/cityBack.jpg'
 
 const SecondModule = (props) => {

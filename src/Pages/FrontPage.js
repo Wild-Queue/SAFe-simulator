@@ -3,6 +3,9 @@ import '../Styles/FrontPage.css';
 import FrontPageHeader from '../components/FrontPageHeader';
 import FrontPageBody from '../components/FrontPageBody';
 
+
+// PageChange = Variable responsible for moving to the next module
+
 function FrontPage({PageChange}) {
 
   return (

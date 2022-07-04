@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import "../Styles/FirstModule.css"
 import RulesWindowModules from '../Modals/RulesWindowModules';
 import FirstModuleRules from './FirstModuleRules';
-import SecondModuleRules from './SecondModuleRules';
 import ThirdModuleRules from './ThirdModuleRules';
 
 const FirstModuleHeader = function ({ PageChange }) {
@@ -12,6 +11,7 @@ const FirstModuleHeader = function ({ PageChange }) {
         PageChange.setPage('0');
     }
 
+    // Moving on to the previous module
     function Back() {
         switch (PageChange.page) {
             case '1':
@@ -41,7 +41,6 @@ const FirstModuleHeader = function ({ PageChange }) {
             </div>
             <RulesWindowModules active={modalActive} setActive={setModalActive}>
                 {PageChange.page === '1' ? <FirstModuleRules /> : null}
-                {PageChange.page === '2' ? <SecondModuleRules /> : null}
                 {PageChange.page === '3' ? <ThirdModuleRules /> : null}
             </RulesWindowModules>
         </div>

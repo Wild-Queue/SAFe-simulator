@@ -5,6 +5,10 @@ import Card from '../Modals/Card.jsx';
 import '../Styles/FirstModuleBar.css';
 import BarButton from '../Modals/BarButtons';
 
+// ChosenCards = Сards that will transfer to module 2
+// PageChange = Variable responsible for moving to the next module
+// dataButtonLeft, dataButtonRight = Structures for displaying the card selection menu
+
 const FirstModuleBody = function ({ ChosenCards,  PageChange, dataButtonLeft, dataButtonRight }) {
     const [Displayed_Image, setDisplayed_Image] = useState('Richey');
     let DispSet = { set: setDisplayed_Image };
@@ -15,22 +19,19 @@ const FirstModuleBody = function ({ ChosenCards,  PageChange, dataButtonLeft, da
 
         let first = -1;
         let second = -1;
-
+        
+        // Choice of 2 cards with the worst WSJF Rank
         switch (dataButtonLeft.ButtonsAgrument[3].DispaingImage) {
             case "Accommodation":
-                //ChosenCards.Accommodation = false;
                 first = 3;
                 break;
             case "Downs":
-                //ChosenCards.Downs = false;
                 first = 5;
                 break;
             case "Blueville":
-                //ChosenCards.Blueville = false;
                 first = 2;
                 break;
             case "Richey":
-                //ChosenCards.Richey = false;
                 first = 0;
                 break;
             default:
@@ -38,32 +39,31 @@ const FirstModuleBody = function ({ ChosenCards,  PageChange, dataButtonLeft, da
         }
         switch (dataButtonRight.ButtonsAgrument[3].DispaingImage) {
             case "Downtown":
-                //ChosenCards.Downtown = false;
                 second = 7;
                 break;
             case "Lean":
-                //ChosenCards.Lean = false;
                 second = 1;
                 break;
             case "ONeill":
-                //ChosenCards.ONeill = false;
                 second = 4;
                 break;
             case "Extreme":
-                //ChosenCards.Extreme = false;
                 second = 6;
                 break;
             default:
                 console.log("Card selection Error");
         };
 
+        //Deletion of 2 cards with the worst WSJF Rank
         ep.splice(Math.min(first, second), 1);
         ep.splice(Math.max(first, second) - 1, 1);
         ChosenCards.setEpic(ep);
-        //window.location.assign('/SecondModule');
+
+        // Transition to the second module
         PageChange.setPage('2');
     }
 
+    // Sorting the card selection menu
     function SortBar() {
         let ArgLeft = Object.assign([], dataButtonLeft.ButtonsAgrument);
         ArgLeft.sort((a, b) => a.Input[4] > b.Input[4] ? -1 : 1);

@@ -3,6 +3,10 @@ import '../Styles/FirstModule.css';
 import FirstModuleHeader from '../components/FirstModuleHeader';
 import FirstModuleBody from '../components/FirstModuleBody';
 
+// ChosenCards = Сards that will transfer to module 2
+// PageChange = Variable responsible for moving to the next module
+// dataButtonLeft, dataButtonRight = Structures for displaying the card selection menu
+
 function FirstModule({ChosenCards, PageChange, dataButtonLeft, dataButtonRight }) {
 
   return (

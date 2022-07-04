@@ -58,14 +58,14 @@ const RoadMap = (props) => {
 
         if(fieldId === 4) {
             let temp = Object.assign([], listFeatures);
-            if(hope[field.id] + szValue > 540) return;
+            if(hope[field.id] + szValue > 400) return;
             hope[field.id] += szValue;
             temp.splice(listFeatures.indexOf(currentCard), 1);
             setSzFields(hope);
             setListFeatures(temp);
         }
         else {
-            if(hope[field.id] + szValue > 540) return;
+            if(hope[field.id] + szValue > 400) return;
             hope[fieldId] -= szValue;
             hope[field.id] += szValue;
             let temp = Object.assign([{}], fields[fieldId - 1]);
@@ -114,7 +114,9 @@ const RoadMap = (props) => {
             }
         }  
         props.Pi(clone);
-        props.PageChange.setPage('3');
+
+        // Transition to the third module
+        //props.PageChange.setPage('3'); 
     }
 
     return (
@@ -137,7 +139,7 @@ const RoadMap = (props) => {
             <div className="PI">
                 {fields.map(field =>
                     <div className="PI1">
-                        <div className="sz"> <strong> {szFields[field.id]}/540 </strong></div>
+                        <div className="sz"> <strong> {szFields[field.id]}/400 </strong></div>
                         <div onDrop={(e) => dropHandler(e, field)}
                              onDragOver={(e) => e.preventDefault()}
                              className="field">

@@ -63,20 +63,17 @@ const Card = ({ CardName, data, ImageName }) => {
         backgroundRepeat: 'no-repeat',
     };
 
-    function isInt(value) {
-        return !isNaN(value) && (function (x) { return (x | 0) === x; })(parseFloat(value))
-    }
-
     function Calculate(event, inputNum) {
-        if (event.target.value.length < 4 && ((isInt(event.target.value) && ['0', '1', '2', '3', '5', '8', '13', '21'].includes(event.target.value)) || event.target.value === '')) {
+        if (['0', '1', '2', '3', '5', '8', '13', '21'].includes(event.target.value) || event.target.value === '') {
 
-
+            // Subtracting a number that was before the input was updated. Made to reset the value if the number is erased.
             if (ButtonsAgrument[BAIndex].Input[inputNum] !== '') {
                 ButtonsAgrument[BAIndex].Input[3] = parseFloat(ButtonsAgrument[BAIndex].Input[3]) - parseFloat(ButtonsAgrument[BAIndex].Input[inputNum]);
                 let WSJF = parseFloat(ButtonsAgrument[BAIndex].Input[3]) / CardSize;
                 ButtonsAgrument[BAIndex].Input[4] = WSJF.toFixed(3);
             }
 
+            // Adding a new input
             if (event.target.value !== '') {
                 ButtonsAgrument[BAIndex].Input[3] = parseFloat(ButtonsAgrument[BAIndex].Input[3]) + parseFloat(event.target.value);
                 let WSJF = parseFloat(ButtonsAgrument[BAIndex].Input[3]) / CardSize;

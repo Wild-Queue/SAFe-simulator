@@ -2,11 +2,12 @@ import React from 'react';
 import Image from "../images/FrontPic.png"
 import '../Styles/FrontPage.css';
 
+// PageChange = Variable responsible for moving to the next module
+
 const FrontPageBody = function ({PageChange}) {
 
     function MoveFirstModule() {
         PageChange.setPage('1');
-        //window.location.assign('/FirstModule');
     }
 
     return (
