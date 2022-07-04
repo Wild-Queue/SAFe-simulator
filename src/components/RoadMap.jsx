@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import '../Styles/RoadMap.css'
 import {sizeFeatures, timeout} from "../Globals/global";
 import MyHeader2 from "./MyHeader2";
+import Inputs from "./Inputs";
 
 const RoadMap = (props) => {
 
@@ -13,7 +14,13 @@ const RoadMap = (props) => {
     const [currentCard, setCurrentCard] = useState("");
     const [fieldId, setFieldId] = useState(0);
     const [szFields, setSzFields] = useState([0, 0, 0, 0]);
+    const [curSelected, setCurSelected] = useState('01');
+    const [shadowActive, setShadowActive] = useState(false);
+    const [rev, setRev] = useState('');
 
+    const abss = {
+        position: 'absolute'
+    }
 
     function dragStartHandler(e, feature, from) {
         setCurrentCard(feature);
@@ -99,12 +106,33 @@ const RoadMap = (props) => {
 
     }
 
-    return (
+    function NextPage() {
+        let clone = [];
+        for (let i = 0; i < props.PiArr.length; i++){
+            if (["01","21","32","34","41","61","63","71","72","81","91"].includes(props.PiArr[i])){
+                clone.push(props.PiArr[i]);
+            }
+        }  
+        props.Pi(clone);
+        props.PageChange.setPage('3');
+    }
 
+    return (
 
         <div className="RoadShell">
 
-            <MyHeader2/>
+            <div onClick={() => {setShadowActive(false); setRev('')}} className={shadowActive ? "shadowRoadMap" : "shadowRoadMap off"}>
+                <div onClick={(e) => e.stopPropagation()} className="shadowIm">
+                    <img style={abss} height="100%" alt="" src={require('../images/' + curSelected + rev + '.jpg')}/>
+                    <img onClick={() =>{
+                        if(rev === '') setRev('rev');
+                        else setRev('');
+                    }} className="rot" style={abss} height="100%" alt="" src={require('../images/rotate.png')}/>
+                    <Inputs input={curSelected} setInputs={props.setInputs} dis={false} inputs={props.inputs} rev={rev}/>
+                </div>
+            </div>
+
+            <MyHeader2 PageChange = {props.PageChange}/>
 
             <div className="PI">
                 {fields.map(field =>
@@ -116,8 +144,14 @@ const RoadMap = (props) => {
                             {field.list.map(feature =>
                                 <div draggable={true}
                                      onDragStart={(e) => dragStartHandler(e, feature, field.id)}
-                                     className="feature">
-                                    <img height="100%" alt="" src={require('../images/' + feature + '.jpg')}/>
+                                     className="feature"
+                                     onDoubleClick={() =>
+                                     {
+                                         setCurSelected(feature);
+                                         setShadowActive(true);
+                                     }}>
+                                    <img style={abss} height="100%" alt="" src={require('../images/' + feature + '.jpg')}/>
+                                    <Inputs input={feature} setInputs={props.setInputs} dis={true} inputs={props.inputs} rev={false}/>
                                 </div>
                             )}
 
@@ -134,8 +168,14 @@ const RoadMap = (props) => {
                 {listFeatures.map(feature =>
                     <div draggable={true}
                          onDragStart={(e) => dragStartHandler(e, feature, 4)}
-                         className="feature">
-                        <img height="100%" alt="" src={require('../images/' + feature + '.jpg')}/>
+                         className="feature"
+                         onDoubleClick={() =>
+                         {
+                             setCurSelected(feature);
+                             setShadowActive(true);
+                         }}>
+                        <img style={abss} height="100%" alt="" src={require('../images/' + feature + '.jpg')}/>
+                        <Inputs input={feature} setInputs={props.setInputs} dis={true} inputs={props.inputs} rev={false}/>
                     </div>
                 )}
             </div>
@@ -143,11 +183,9 @@ const RoadMap = (props) => {
             <button className="roadConfirm" onClick={async () =>
             {props.road(0); props.menu(1);
              props.Pi(fields[0].list);
-             props.arrow('arrowBlue sec');
-             await timeout(200);
-             props.arrow('arrowBlue thr')
-             await timeout(200);
-             props.nextModule(false)}}> Confirm</button>
+             props.nextModule(false)}}> Назад </button>
+
+            <button onClick={() => {NextPage()}} className="roadConfirm add"> Закончить модуль </button>
 
         </div>
     );

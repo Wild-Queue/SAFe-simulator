@@ -102,7 +102,7 @@ const FirstModuleBody = function ({ ChosenCards,  PageChange, dataButtonLeft, da
                 </div>
             </div>
             <button onClick={SortBar} className='FM_Sort_Button'> Отсортировать карточки</button>
-            <button onClick={SaveButton} className='FM_Save_Button'> Сохранить</button>
+            <button onClick={SaveButton} className='FM_Save_Button'> Завершить задание</button>
         </div>
     )
 }

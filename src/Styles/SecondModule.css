@@ -3,9 +3,9 @@
     border: 3px solid red;
     border-radius: 40px;
     background-color: rgba(115, 34, 34, 0.95);
-    bottom: 8%;
+    bottom: 25%;
     left: 12%;
-    height: 75vh;
+    height: 50vh;
     width: 40vw;
 }
 
@@ -22,14 +22,14 @@
 }
 
 .road{
-    font-size: 25px;
+    font-size: 1.45vw;
     position: absolute;
     border-radius: 12px;
-    height: 10vh;
-    width: 13vw;
+    height: 12vh;
+    width: 15vw;
     background-color: orange;
     left: 10%;
-    bottom: 45%;
+    bottom: 21%;
     cursor: pointer;
 }
 
@@ -65,14 +65,27 @@
     background-color: chocolate;
 }
 
+.module2Content{
+    position: fixed;
+    left: 20%;
+    top: 15%;
+    background-color: white;
+    color: black;
+    width: 60vw;
+    overflow-y: auto;
+    max-height: 70vw;
+    border-radius: 20px;
+    padding: 1%;
+}
+
 .featuresMenu{
-    font-size: 25px;
-    height: 10vh;
-    width: 13vw;
+    font-size: 1.45vw;
+    height: 12vh;
+    width: 15vw;
     border-radius: 12px;
     background-color: orange;
     left: 10%;
-    bottom: 75%;
+    bottom: 62%;
     position: absolute;
     cursor: pointer;
 }

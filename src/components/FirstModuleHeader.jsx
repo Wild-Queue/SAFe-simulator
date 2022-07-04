@@ -6,7 +6,7 @@ import SecondModuleRules from './SecondModuleRules';
 import ThirdModuleRules from './ThirdModuleRules';
 
 const FirstModuleHeader = function ({ PageChange }) {
-    const [modalActive, setModalActive] = useState(true)
+    const [modalActive, setModalActive] = useState(false)
 
     function MoveHome() {
         PageChange.setPage('0');

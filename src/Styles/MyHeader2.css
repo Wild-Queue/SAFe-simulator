@@ -18,9 +18,11 @@
     color: orange;
     border: 1px solid orange;
     cursor: pointer;
+    font-size: 0.9vw;
 }
 
 .buttonModulePriority{
+    font-size: 0.9vw;
     background-color: black;
     color: green;
     border: 1px solid green;
@@ -40,11 +42,9 @@
     color:black
 }
 
-.moduleName{
-    margin-top: 1.4vh;
-    margin-left: 2vw;
-    font-style: italic;
-    font-family: "Calisto MT", serif;
+.title22{
+    margin-left: 0.5%;
+    margin-top: 0.5%;
 }
 
 .headerPriority{
@@ -54,7 +54,6 @@
     height: 10vh;
     background-color: black;
     font-family:'Times New Roman', Times, serif;
-    font-size: 20px;
-    padding: 0.9%;
+    font-size: 1.4vw;
     color: white;
 }

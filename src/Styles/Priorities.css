@@ -9,6 +9,14 @@
     transition: 0.5s;
 }
 
+.rot{
+    position: absolute;
+    height: 5vh;
+    right: 1%;
+    bottom: 1%;
+    cursor: pointer;
+}
+
 .shadow.off{
     opacity: 0;
     transition: 0.5s;
@@ -39,7 +47,7 @@
 .featuresField{
     background-color: rgba(118, 116, 130, 0.13);
     border: 3px solid blue;
-    width: 44vw;
+    width: 95vh;
     padding: 0.5%;
     margin-left: 5%;
     margin-top: 1.5%;
@@ -69,9 +77,9 @@
     font-size: 1.1vh;
     position: relative;
     height: 24vh;
+    width: 36vh;
     margin-left: 2.9vw;
     margin-top: 1.8vh;
-    border: 1px solid black;
     cursor: pointer;
     transition: 0.2s;
     z-index: 0;
@@ -79,6 +87,7 @@
 
 .imFeature:hover{
     height: 26vh;
+    width: 39vh;
     transition: 0.2s;
 }
 
@@ -91,11 +100,11 @@
     left: 50%;
     bottom: 26%;
     height: 58vh;
+    width: 86.5vh;
     z-index: 20;
     transition: 0.7s;
     transform: scale(1);
     font-size: 2.3vh;
-    cursor: grab;
 }
 
 .styleSelected.off{

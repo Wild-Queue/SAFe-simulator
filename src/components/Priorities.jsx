@@ -25,6 +25,10 @@ const Priorities = (props) => {
 
     const ListOf = props.epicValues.find(function (e) {return e.id === ep[cur - 1]}).Input;
 
+    const abss = {
+        position: 'absolute'
+    }
+
     return (
         <div>
 
@@ -38,21 +42,21 @@ const Priorities = (props) => {
                     }}
                 className={styleShadow}>
 
-                <div onClick={(e) => e.stopPropagation()} className={styleSelected}
-                     onDragStart={async (e) =>
-                     {
-                      e.preventDefault();
-                      setStyleSelected('styleSelected off');
-                      await timeout(700);
-                      if(rev==='') setRev('rev');
-                      else setRev('');
-                      setStyleSelected('styleSelected');}}>
-                    <img height="100%" alt="" src={require('../images/' + ep[cur - 1] + curSelected + rev + '.jpg')}/>
+                <div onClick={(e) => e.stopPropagation()} className={styleSelected}>
+                    <img height="100%" style={abss} alt="" src={require('../images/' + ep[cur - 1] + curSelected + rev + '.jpg')}/>
+                    <img onClick={async (e) =>
+                    {
+                        setStyleSelected('styleSelected off');
+                        await timeout(700);
+                        if(rev==='') setRev('rev');
+                        else setRev('');
+                        setStyleSelected('styleSelected');}}
+                        className="rot" height="100%" alt="" src={require('../images/rotate.png')}/>
                     <Inputs input={"" + ep[cur - 1] + curSelected} setInputs={props.setInputs} dis={false} inputs={props.inputs} rev={rev}/>
                 </div>
             </div>
 
-            <MyHeader2/>
+            <MyHeader2 PageChange = {props.PageChange}/>
 
             <div className="listFeatures">
 
@@ -90,8 +94,8 @@ const Priorities = (props) => {
                              setStyleSelected('styleSelected off');
                              await timeout(200);
                              setStyleSelected('styleSelected')}}
-                             className= { "imFeature"}>
-                                <img height="100%" src={require('../images/' + ep[cur - 1] + feature + '.jpg')} alt=""/>
+                             className= {"imFeature"}>
+                                <img style={abss} height="100%" src={require('../images/' + ep[cur - 1] + feature + '.jpg')} alt=""/>
                                 <Inputs input={"" + ep[cur - 1] + feature} setInputs={props.setInputs} dis={true} inputs={props.inputs}/>
                         </div>
                     )}

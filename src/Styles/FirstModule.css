@@ -167,25 +167,29 @@
 
 .FM_Save_Button{
     position: relative;
-    padding: 1vw;
+    padding: 0.5vw;
+    padding-left: 1.6vw;
+    padding-right: 1.6vw;
     margin-top: 1vw;
     margin-left: 86vw;
     background:rgb(29, 223, 22);
     border: 2px solid rgb(29, 223, 22);
     border-radius: 10px;
     color:white; 
-    font-size: 2vw;
+    font-size: 1.7vw;
 }
 
 .FM_Save_Button:hover{
-    padding: 1vw;
+    padding: 0.5vw;
+    padding-left: 1.6vw;
+    padding-right: 1.6vw;
     margin-top: 1vw;
     margin-left: 86vw;
     background: darkgreen;
     border: 2px solid darkgreen;
     border-radius: 10px;
     color:white; 
-    font-size: 2vw;
+    font-size: 1.7vw;
 }
 
 

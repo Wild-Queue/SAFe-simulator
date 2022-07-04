@@ -8,7 +8,8 @@ const Inputs = (props) => {
 
     function Update(i, x){
         const temp = Object.assign([], input);
-        const x0 = isNaN(Number.parseInt(x)) ? 0 : Number.parseInt(x);
+        const x0 = (x === '') ? 0 : Number.parseInt(x);
+        if(!fibonacci.includes('' + x0)) return;
         if(i === 1) temp.fir = x0;
         else if(i === 2) temp.sec = x0;
         else temp.thr = x0;
@@ -16,16 +17,6 @@ const Inputs = (props) => {
             if(el.el === temp.el) return temp;
             return el;
         }));
-    }
-
-    function EndInput(i, x){
-        let x0 = -1;
-        if(x < 0) x0 = 0;
-        for(let i = 0;i < fibonacci.length;i++)
-            if(fibonacci[i] <= x && x <= fibonacci[i + 1])
-                x0 = fibonacci[i];
-        if(x0 === -1) x0 = fibonacci[9];
-        Update(i, x0);
     }
 
     function myRound(n) {
@@ -36,16 +27,13 @@ const Inputs = (props) => {
     if(props.rev === 'rev') return(<div></div>)
     else
     return (
-        <div className="Shell">
+        <div className="Shell22">
             <input disabled={props.dis} value={input.fir} maxLength={2} className="Main First"
-                   onChange={event => Update(1, event.target.value)}
-                   onBlurCapture={event => EndInput(1, event.target.value)}/>
+                   onChange={event => Update(1, event.target.value)}/>
             <input disabled={props.dis} value={input.sec} maxLength={2} className="Main Second"
-                   onChange={event => Update(2, event.target.value)}
-                   onBlurCapture={event => EndInput(2, event.target.value)}/>
+                   onChange={event => Update(2, event.target.value)}/>
             <input disabled={props.dis} value={input.thr} maxLength={2} className="Main Third"
-                   onChange={event => Update(3, event.target.value)}
-                   onBlurCapture={event => EndInput(3, event.target.value)}/>
+                   onChange={event => Update(3, event.target.value)}/>
             <div className="Sum">{input.fir + input.sec + input.thr}</div>
             <div className="w">
                 {myRound((input.fir + input.sec + input.thr) /

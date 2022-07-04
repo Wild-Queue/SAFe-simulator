@@ -71,54 +71,18 @@ const Card = ({ CardName, data, ImageName }) => {
         if (event.target.value.length < 4 && ((isInt(event.target.value) && ['0', '1', '2', '3', '5', '8', '13', '21'].includes(event.target.value)) || event.target.value === '')) {
 
 
-            switch (inputNum) {
-                case '1':
-                    if (ButtonsAgrument[BAIndex].Input[0] !== '') {
-                        ButtonsAgrument[BAIndex].Input[3] = parseFloat(ButtonsAgrument[BAIndex].Input[3]) - parseFloat(ButtonsAgrument[BAIndex].Input[0]);
-                        let WSJF = parseFloat(ButtonsAgrument[BAIndex].Input[3]) / CardSize;
-                        ButtonsAgrument[BAIndex].Input[4] = WSJF.toFixed(3);
-                    }
-
-                    if (event.target.value !== '') {
-                        ButtonsAgrument[BAIndex].Input[3] = parseFloat(ButtonsAgrument[BAIndex].Input[3]) + parseFloat(event.target.value);
-                        let WSJF = parseFloat(ButtonsAgrument[BAIndex].Input[3]) / CardSize;
-                        ButtonsAgrument[BAIndex].Input[4] = WSJF.toFixed(3);
-                    }
-                    ButtonsAgrument[BAIndex].Input[0] = event.target.value;
-                    break;
-                case '2':
-                    if (ButtonsAgrument[BAIndex].Input[1] !== '') {
-                        ButtonsAgrument[BAIndex].Input[3] = parseFloat(ButtonsAgrument[BAIndex].Input[3]) - parseFloat(ButtonsAgrument[BAIndex].Input[1]);
-                        let WSJF = parseFloat(ButtonsAgrument[BAIndex].Input[3]) / CardSize;
-                        ButtonsAgrument[BAIndex].Input[4] = WSJF.toFixed(3);
-                    }
-
-                    if (event.target.value !== '') {
-                        ButtonsAgrument[BAIndex].Input[3] = parseFloat(ButtonsAgrument[BAIndex].Input[3]) + parseFloat(event.target.value);
-                        let WSJF = parseFloat(ButtonsAgrument[BAIndex].Input[3]) / CardSize;
-                        ButtonsAgrument[BAIndex].Input[4] = WSJF.toFixed(3);
-                    }
-                    ButtonsAgrument[BAIndex].Input[1] = event.target.value;
-                    break;
-                case '3':
-                    if (ButtonsAgrument[BAIndex].Input[2] !== '') {
-                        ButtonsAgrument[BAIndex].Input[3] = parseFloat(ButtonsAgrument[BAIndex].Input[3]) - parseFloat(ButtonsAgrument[BAIndex].Input[2]);
-                        let WSJF = parseFloat(ButtonsAgrument[BAIndex].Input[3]) / CardSize;
-                        ButtonsAgrument[BAIndex].Input[4] = WSJF.toFixed(3);
-                    }
-
-                    if (event.target.value !== '') {
-                        ButtonsAgrument[BAIndex].Input[3] = parseFloat(ButtonsAgrument[BAIndex].Input[3]) + parseFloat(event.target.value);
-                        let WSJF = parseFloat(ButtonsAgrument[BAIndex].Input[3]) / CardSize;
-                        ButtonsAgrument[BAIndex].Input[4] = WSJF.toFixed(3);
-                    }
-                    ButtonsAgrument[BAIndex].Input[2] = event.target.value;
-                    break;
-                default:
-                    console.log("Input Error")
+            if (ButtonsAgrument[BAIndex].Input[inputNum] !== '') {
+                ButtonsAgrument[BAIndex].Input[3] = parseFloat(ButtonsAgrument[BAIndex].Input[3]) - parseFloat(ButtonsAgrument[BAIndex].Input[inputNum]);
+                let WSJF = parseFloat(ButtonsAgrument[BAIndex].Input[3]) / CardSize;
+                ButtonsAgrument[BAIndex].Input[4] = WSJF.toFixed(3);
             }
 
-
+            if (event.target.value !== '') {
+                ButtonsAgrument[BAIndex].Input[3] = parseFloat(ButtonsAgrument[BAIndex].Input[3]) + parseFloat(event.target.value);
+                let WSJF = parseFloat(ButtonsAgrument[BAIndex].Input[3]) / CardSize;
+                ButtonsAgrument[BAIndex].Input[4] = WSJF.toFixed(3);
+            }
+            ButtonsAgrument[BAIndex].Input[inputNum] = event.target.value;
             data.setButtonsAgrument(ButtonsAgrument);
         }
     }
@@ -130,17 +94,17 @@ const Card = ({ CardName, data, ImageName }) => {
                     <input className='FM_Input_1'
                         type="text"
                         value={ButtonsAgrument[BAIndex].Input[0]}
-                        onChange={event => Calculate(event, `1`)} />
+                        onChange={event => Calculate(event, 0)} />
 
                     <input className='FM_Input_2'
                         type="text"
                         value={ButtonsAgrument[BAIndex].Input[1]}
-                        onChange={event => Calculate(event, `2`)} />
+                        onChange={event => Calculate(event, 1)} />
 
                     <input className='FM_Input_3'
                         type="text"
                         value={ButtonsAgrument[BAIndex].Input[2]}
-                        onChange={event => Calculate(event, `3`)} />
+                        onChange={event => Calculate(event, 2)} />
                 </div>
                 <div >
                     <h1 className='FM_SumOfInputs'>{ButtonsAgrument[BAIndex].Input[3]}</h1>
